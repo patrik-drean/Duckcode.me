@@ -24,3 +24,23 @@ main {
 #dropdown01  {
    color: white !important;
 }
+
+#duck_logo {
+   width: 50px;
+}
+
+#nav {
+   background-color: white !important;
+   border-bottom: .9px #e0e0e0 solid;
+}
+
+#nav a {
+   color: #71767c;
+   font-size: 20px;
+}
+#nav ul {
+   margin: 0 auto;
+}
+#nav li {
+   margin: 0 10px;
+}
