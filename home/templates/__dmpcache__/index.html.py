@@ -7,7 +7,7 @@ __M_locals_builtin = locals
 _magic_number = 10
 _modified_time = 1521325767.554667
 _enable_loop = True
-_template_filename = '/Users/patrikdrean/Documents/python_projects/coding_duck/coding_duck/home/templates/index.html'
+_template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/index.html'
 _template_uri = 'index.html'
 _source_encoding = 'utf-8'
 import django_mako_plus
@@ -57,6 +57,6 @@ def render_top_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/coding_duck/coding_duck/home/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"28": 0, "35": 1, "40": 5, "46": 3, "52": 3, "58": 52}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"28": 0, "35": 1, "40": 5, "46": 3, "52": 3, "58": 52}}
 __M_END_METADATA
 """
