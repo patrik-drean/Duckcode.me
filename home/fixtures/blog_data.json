@@ -1,5 +1,15 @@
 [
 {
+  "model": "home.category",
+  "pk": 1,
+  "fields": {
+    "name": "Python",
+    "filename": null,
+    "create_date": "2018-03-23T20:32:32.404",
+    "last_modified_date": "2018-03-23T20:32:56.366"
+  }
+},
+{
   "model": "home.blog",
   "pk": 1,
   "fields": {
@@ -10,7 +20,8 @@
     "last_modified_date": "2018-03-22T17:31:29.037",
     "filename": "server.jpg",
     "alt_text": "deploying to a server",
-    "top_post": true
+    "top_post": true,
+    "category": 1
   }
 },
 {
@@ -24,7 +35,8 @@
     "last_modified_date": "2018-03-23T05:32:55.758",
     "filename": "skyscraper.jpg",
     "alt_text": "high skyscraper",
-    "top_post": true
+    "top_post": true,
+    "category": 1
   }
 },
 {
@@ -38,7 +50,8 @@
     "last_modified_date": "2018-03-23T06:32:55.758",
     "filename": "tiger_how_to_concatenate.jpg",
     "alt_text": "Tiger - how to concatenate",
-    "top_post": true
+    "top_post": true,
+    "category": 1
   }
 },
 {
@@ -52,7 +65,8 @@
     "last_modified_date": "2018-03-23T17:31:29.037",
     "filename": "heroku_deploying_custom_framework.jpg",
     "alt_text": "laptop deploying to Heroku",
-    "top_post": true
+    "top_post": true,
+    "category": 1
   }
 },
 {
@@ -66,7 +80,8 @@
     "last_modified_date": "2018-03-23T05:32:55.758",
     "filename": "skyscraper.jpg",
     "alt_text": "high skyscraper",
-    "top_post": true
+    "top_post": true,
+    "category": 1
   }
 },
 {
@@ -80,7 +95,8 @@
     "last_modified_date": "2018-03-23T06:32:55.758",
     "filename": "tiger_how_to_concatenate.jpg",
     "alt_text": "Tiger - how to concatenate",
-    "top_post": true
+    "top_post": true,
+    "category": 1
   }
 }
 ]
