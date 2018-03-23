@@ -5,7 +5,7 @@ from home import models as hmod
 
 @view_function
 def process_request(request):
-    recent_blogs = list(hmod.Blog.objects.all())
+    recent_blogs = list(hmod.Blog.objects.all().order_by('-id'))[0:6]
     top_blogs = list(hmod.Blog.objects.filter(top_post = True).order_by('-id'))[0:3]
 
     context = {
