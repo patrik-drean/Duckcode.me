@@ -1,3 +1,84 @@
-h4.utc-time {
-    color: #AA3333;
+@font-face{
+	font-family: 'ArchitectsDaughter';
+	src: url('fonts/ArchitectsDaughter.ttf');
+}
+@font-face{
+	font-family: 'Acme-Regular';
+	src: url('fonts/Acme-Regular.ttf');
+}
+
+/*********************** Highlight blog **********************/
+#highlight_blog_div {
+   margin: 0 0 40px 0;
+   padding: 0;
+   text-align: center;
+   position: relative;
+}
+
+#highlight_img {
+   width: 100%;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+}
+#highlight_message_div {
+   background: rgb(89,89,89);
+   background: rgba(89,89,89,.8);
+   max-width: 600px;
+   position: absolute;
+   bottom: 15%;
+   left: 4%;
+   border-radius: 8px;
+   padding: 5px 20px 20px 20px;
+   color: white;
+}
+#highlight_datestamp {
+   /* color: #dbdbdb; */
+   font-family:  sans-serif;
+}
+#highlight_description {
+   text-align: left;
+   font-family: sans-serif;
+   font-size: 20px;
+}
+#highlight_featured_post {
+   text-align: left;
+   color: #24BEFA;
+   padding: 0;
+   margin: 0 0 10px 0;
+}
+h1 {
+   font-size: 27px;
+   font-family: ArchitectsDaughter;
+   padding: 0 0 8px 0;
+}
+h2 {
+   font-size: 25px;
+   font-family: ArchitectsDaughter;
+   padding: 0 0 8px 0;
+   margin: 10px 0 0 0;
+   font-weight: 700;
+}
+
+
+/*********************** Top blogs **********************/
+.top_blog_div {
+   padding: 10px;
+}
+.top_img {
+   width: 40vw;
+   display: inline-block;
+}
+.top_message_div {
+   display: inline-block;
+   width: 40vw;
+   padding: 10px;
+   margin: 0 0 0 10px;
+}
+.top_datestamp {
+   margin: 0 0 5px 10px;
+   color: #707070;
+}
+.top_description {
+   font-size: 20px;
 }

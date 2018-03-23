@@ -2,4 +2,28 @@
 
 <%block name="top_content">
 
+<div id="highlight_blog_div">
+   <img id="highlight_img" src="${ STATIC_URL }${recent_blogs[-1].image_url()}" alt="${ recent_blogs[-1].alt_text}"/>
+   <div id="highlight_message_div">
+      <p id="highlight_featured_post">Featured Post</p>
+      <h1>${ recent_blogs[-1].title }</h1>
+      <p id="highlight_datestamp">by Patrik Drean - 3 hours ago</p>
+      <p id="highlight_description">${ recent_blogs[-1].description }</p>
+   </div>
+</div>
+
+<div id="top_blog_div">
+   <h2>Top Posts</h2>
+   % for b in top_blogs:
+      <div class="top_blog_div">
+         <img class="top_img" src="${ STATIC_URL }${ b.image_url()}" alt="${ b.alt_text}"/>
+         <div class="top_message_div">
+            <h2>${ b.title }</h2>
+            <p class="top_datestamp">by Patrik Drean - 3 hours ago</p>
+            <p class="top_description">${ b.description }</p>
+         </div>
+      </div>
+   % endfor
+</div>
+
 </%block>

@@ -1,14 +1,15 @@
 from django.conf import settings
 from django_mako_plus import view_function, jscontext
 from datetime import datetime, timezone
+from home import models as hmod
 
 @view_function
 def process_request(request):
-    utc_time = datetime.utcnow()
+    recent_blogs = list(hmod.Blog.objects.all())
+    top_blogs = list(hmod.Blog.objects.filter(top_post = True).order_by('-id'))[0:3]
+
     context = {
-        # sent to index.html:
-        # 'utc_time': utc_time,
-        # sent to index.html and index.js:
-        # jscontext('utc_epoch'): utc_time.timestamp(),
+        'recent_blogs': recent_blogs,
+        'top_blogs': top_blogs,
     }
     return request.dmp.render('index.html', context)

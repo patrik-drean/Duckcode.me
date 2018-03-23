@@ -1,7 +1,7 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import User
 
-class User(AbstractUser):
+class User(User):
     pass
 
 class Blog(models.Model):
@@ -11,14 +11,19 @@ class Blog(models.Model):
     create_date = models.DateTimeField(auto_now_add=True)
     last_modified_date = models.DateTimeField(auto_now=True)
     filename = models.TextField(blank=True, null=True)
+    alt_text = models.TextField(blank=True, null=True)
+    top_post = models.BooleanField()
 
     def image_url(self):
-        ''' Always return an image '''
-        product = Blog.objects.get(id = self.id).
-        if product is not None:
-            url = '/static/catalog/media/products/' + product.Filename
+        blog = Blog.objects.get(id = self.id)
+        url = '/home/media/blog_main/' + blog.filename
         return url
 
 class Category(models.Model):
     name = models.TextField()
     filename = models.TextField(blank=True, null=True)
+
+    def image_url(self):
+        category = Category.objects.get(id = self.id)
+        url = '/home/media/blog_main/' + category.filename
+        return url
