@@ -1,0 +1,26 @@
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+
+[packages]
+
+django = "*"
+gunicorn = "*"
+"psycopg2" = "*"
+django-mako-plus = "*"
+django-username-email = "*"
+whitenoise = "*"
+docopt = "*"
+pipenv = "*"
+python-dateutil = "*"
+pytz = "*"
+requests = "*"
+six = "*"
+"urllib3" = "*"
+virtualenv = "*"
+django-heroku = "*"
+
+
+[requires]
+
+python_version = "3.6"
