@@ -28,5 +28,5 @@ class Blog(models.Model):
 
     def image_url(self):
         blog = Blog.objects.get(id = self.id)
-        url = '/home/media/blog_main/' + blog.filename
+        url = 'home/media/blog_main/' + blog.filename
         return url
