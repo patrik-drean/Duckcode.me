@@ -2,7 +2,7 @@
 <%! from home import duck_time_past as dtp%>
 <%block name="top_content">
 
-<a href="/">
+<a href="/article/${ recent_blogs[0].url }">
    <div id="highlight_blog_div">
       <img id="highlight_img" src="${ STATIC_URL }${recent_blogs[0].image_url()}" alt="${ recent_blogs[0].alt_text}" />
       <div id="highlight_message_div">
@@ -14,9 +14,9 @@
    </div>
 </a>
 <div id="top_blog_div_wrap">
-   <h2>Top Posts</h2>
+   <h2>Popular Posts</h2>
    % for b in top_blogs:
-      <a href="/">
+      <a href="/article/${ b.url }">
          <div class="top_blog_div">
             <img class="top_img" src="${ STATIC_URL }${ b.image_url()}" alt="${ b.alt_text}"/>
             <div class="top_message_div">
@@ -32,7 +32,7 @@
 <div id="recent_blog_div_wrap">
    <h2>Recent Posts</h2>
    % for b in recent_blogs:
-      <a href="/">
+      <a href="/article/${ b.url }">
          <div class="recent_blog_div">
             <img class="recent_img" src="${ STATIC_URL }${ b.image_url()}" alt="${ b.alt_text}"/>
             <div class="recent_message_div">

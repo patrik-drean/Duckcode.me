@@ -17,6 +17,7 @@ class Category(models.Model):
 
 class Blog(models.Model):
     title = models.TextField()
+    url = models.TextField()
     description = models.TextField(blank=True, null=True)
     content = models.TextField()
     create_date = models.DateTimeField(auto_now_add=True)

@@ -54,3 +54,7 @@ main {
 #nav li {
    margin: 0 10px;
 }
+
+a:visited {
+   color: inherit;
+}
