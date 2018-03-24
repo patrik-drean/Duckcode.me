@@ -1,3 +1,5 @@
+[[source]]
+
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 
@@ -5,20 +7,22 @@ verify_ssl = true
 [packages]
 
 django = "*"
+dj-database-url = "*"
 gunicorn = "*"
-"psycopg2" = "*"
+psycopg2 = "*"
+django-heroku = "*"
 django-mako-plus = "*"
-django-username-email = "*"
 whitenoise = "*"
+django-username-email = "*"
 docopt = "*"
 pipenv = "*"
+ptpython = "*"
 python-dateutil = "*"
 pytz = "*"
 requests = "*"
 six = "*"
-"urllib3" = "*"
-virtualenv = "*"
-django-heroku = "*"
+urllib3 = "*"
+
 
 
 [requires]
