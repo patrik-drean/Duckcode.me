@@ -12,7 +12,7 @@ class Category(models.Model):
 
     def image_url(self):
         category = Category.objects.get(id = self.id)
-        url = '/home/media/blog_main/' + category.filename
+        url = 'home/media/blog_main/' + category.filename
         return url
 
 class Blog(models.Model):
