@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1521740901.181182
+_modified_time = 1521859476.0253508
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm'
 _template_uri = 'base.htm'
@@ -20,27 +20,27 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        def left_content():
-            return render_left_content(context._locals(__M_locals))
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
+        self = context.get('self', UNDEFINED)
         def middle_content():
             return render_middle_content(context._locals(__M_locals))
-        def top_content():
-            return render_top_content(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
         def footer_content():
             return render_footer_content(context._locals(__M_locals))
+        def left_content():
+            return render_left_content(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        def top_content():
+            return render_top_content(context._locals(__M_locals))
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\n<html>\n    <meta charset="UTF-8">\n    <head>\n      ')
         __M_writer('\n        <title>Duck Code: The Journey</title>\n\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
-        __M_writer('        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>\n\n')
+        __M_writer('        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>\n\n')
         __M_writer('        <script src="/django_mako_plus/dmp-common.min.js"></script>\n        ')
         __M_writer(str( django_mako_plus.links(self) ))
         __M_writer('\n\n    </head>\n    <body>\n\n      <nav id = \'nav\' class="navbar navbar-toggleable-md navbar-inverse bg-inverse">\n     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">\n      <span class="navbar-toggler-icon"></span>\n     </button>\n     <a class="navbar-brand" href="/">\n        <img id=\'duck_logo\' src="')
         __M_writer(str(STATIC_URL))
-        __M_writer('/home/media/img/duck_logo.png" />\n     </a>\n\n     <div class="collapse navbar-collapse" id="navbarsExampleDefault">\n      <ul class="navbar-nav mr-auto">\n         <li class="nav-item">\n           <a class="nav-link" href="#">Recent Posts</a>\n         </li>\n         <li class="nav-item">\n           <a class="nav-link" href="#">Blog Categories</a>\n         </li>\n         <li class="nav-item">\n           <a class="nav-link" href="#">About Me</a>\n         </li>\n      </ul>\n      <!-- <form class="form-inline my-2 my-md-0">\n         <input class="form-control mr-sm-2" placeholder="Search" type="text">\n         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>\n      </form> -->\n      <div class="nav-item dropdown ">\n        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>\n        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">\n          <a class="dropdown-item" href="#">Login</a>\n          <a class="dropdown-item" href="#">Signup</a>\n        </div>\n     </div>\n     </div>\n  </nav>\n\n        <main>\n         <div class="row">\n           <div class="col-md-12" id="top-section">\n             ')
+        __M_writer('home/media/img/duck_logo.png" />\n     </a>\n\n     <div class="collapse navbar-collapse" id="navbarsExampleDefault">\n      <ul class="navbar-nav mr-auto">\n         <li class="nav-item">\n           <a class="nav-link" href="#">Recent Posts</a>\n         </li>\n         <li class="nav-item">\n           <a class="nav-link" href="#">Blog Categories</a>\n         </li>\n         <li class="nav-item">\n           <a class="nav-link" href="#">About Me</a>\n         </li>\n      </ul>\n      <!-- <form class="form-inline my-2 my-md-0">\n         <input class="form-control mr-sm-2" placeholder="Search" type="text">\n         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>\n      </form> -->\n      <div class="nav-item dropdown ">\n        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>\n        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">\n          <a class="dropdown-item" href="#">Login</a>\n          <a class="dropdown-item" href="#">Signup</a>\n        </div>\n     </div>\n     </div>\n  </nav>\n\n        <main>\n         <div class="row">\n           <div class="col-md-12" id="top-section">\n             ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'top_content'):
             context['self'].top_content(**pageargs)
         
