@@ -30,7 +30,10 @@ p {
    font-size: 1.3em;
 }
 
-span {
+.code {
    background-color: grey;
+   width: 100%;
+   padding: .5em .3em;
    color: white;
+   font-size: 1.3em;
 }
