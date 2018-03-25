@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1521937084.2724679
+_modified_time = 1521939627.544628
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/index.html'
 _template_uri = 'index.html'
@@ -31,13 +31,13 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        recent_blogs = context.get('recent_blogs', UNDEFINED)
         str = context.get('str', UNDEFINED)
-        categories = context.get('categories', UNDEFINED)
         def top_content():
             return render_top_content(context._locals(__M_locals))
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        categories = context.get('categories', UNDEFINED)
         top_blogs = context.get('top_blogs', UNDEFINED)
+        recent_blogs = context.get('recent_blogs', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')
@@ -54,13 +54,13 @@ def render_body(context,**pageargs):
 def render_top_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        recent_blogs = context.get('recent_blogs', UNDEFINED)
         str = context.get('str', UNDEFINED)
-        categories = context.get('categories', UNDEFINED)
         def top_content():
             return render_top_content(context)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        categories = context.get('categories', UNDEFINED)
         top_blogs = context.get('top_blogs', UNDEFINED)
+        recent_blogs = context.get('recent_blogs', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n\n<a href="/article/')
         __M_writer(str( recent_blogs[0].url ))
@@ -104,9 +104,9 @@ def render_top_content(context,**pageargs):
             __M_writer(str( b.title ))
             __M_writer('</h3>\n               <p class="recent_datestamp">by Patrik Drean - ')
             __M_writer(str( dtp.past_time(str(b.create_date)) ))
-            __M_writer('</p>\n               <!--<p class="recent_description">')
+            __M_writer('</p>\n               <p class="recent_description">')
             __M_writer(str( b.description ))
-            __M_writer('</p>-->\n            </div>\n         </div>\n      </a>\n')
+            __M_writer('</p>\n            </div>\n         </div>\n      </a>\n')
         __M_writer('</div>\n\n<div id="category_div_wrap">\n   <h2>Categories</h2>\n   <ul>\n')
         for c in categories:
             __M_writer('         <li>\n            <a href="/category/')

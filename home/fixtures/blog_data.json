@@ -2,6 +2,7 @@
 {
   "model": "home.category",
   "pk": 1,
+  "url": "python",
   "fields": {
     "name": "Python",
     "filename": null,
@@ -12,6 +13,7 @@
 {
   "model": "home.category",
   "pk": 2,
+  "url": "deployment",
   "fields": {
     "name": "Deployment",
     "filename": null,
@@ -22,6 +24,7 @@
 {
   "model": "home.category",
   "pk": 3,
+  "url": "javascript",
   "fields": {
     "name": "Javascript",
     "filename": null,
@@ -32,6 +35,7 @@
 {
   "model": "home.category",
   "pk": 4,
+  "url": "interviewing",
   "fields": {
     "name": "Interviewing",
     "filename": null,
@@ -42,6 +46,7 @@
 {
   "model": "home.category",
   "pk": 5,
+  "url": "personal",
   "fields": {
     "name": "Personal",
     "filename": null,
@@ -52,6 +57,7 @@
 {
   "model": "home.category",
   "pk": 6,
+  "url": "soft_skils",
   "fields": {
     "name": "Soft Skills",
     "filename": null,
@@ -111,7 +117,7 @@
   "model": "home.blog",
   "pk": 4,
   "fields": {
-    "title": "How to Deploy to Heroku with Custom Frameworks",
+    "title": "Deploy to Heroku with Custom Frameworks",
     "url": "how_to_deploy_to_heroku",
     "description": "It's easy to deploy to a site like Heroku or Digital Ocean when you follow the standard procedure. What happens when you're using a custom framework?",
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit.",

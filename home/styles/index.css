@@ -133,7 +133,8 @@ p {
    width: 30vw;
    display: inline-block;
    vertical-align: top;
-   min-height: 400px;
+   min-height: 450px;
+
 }
 .recent_img {
    width: 30vw;
@@ -142,6 +143,7 @@ p {
 .recent_message_div {
    width: 25vw;
    padding: 10px;
+
 }
 .recent_datestamp {
    margin: 0 0 5px 10px;
@@ -149,6 +151,11 @@ p {
 }
 .recent_description {
    font-size: 20px;
+	/* white-space: nowrap;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	height: 100px; */
+
 }
 
 /*********************** Categories **********************/
