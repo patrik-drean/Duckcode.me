@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 class Category(models.Model):
     name = models.TextField()
-    # url = models.TextField()
+    url = models.TextField()
     filename = models.TextField(blank=True, null=True)
     create_date = models.DateTimeField(auto_now_add=True)
     last_modified_date = models.DateTimeField(auto_now=True)
