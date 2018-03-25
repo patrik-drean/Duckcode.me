@@ -1,0 +1,20 @@
+<%inherit file="base.htm" />
+<%! from home import duck_time_past as dtp %>
+<%block name="top_content">
+<div id="category_blog_div_wrap">
+   % for b in blogs:
+      <a href="/article/${ b.url }">
+         <div class="category_blog_div">
+            <img class="category_img" src="${ STATIC_URL }${ b.image_url()}" alt="${ b.alt_text}"/>
+            <div class="category_message_div">
+               <h3>${ b.title }</h3>
+               <p class="category_datestamp">by Patrik Drean - ${ dtp.past_time(str(b.create_date)) }</p>
+               <p class="category_description">${ b.description }</p>
+            </div>
+         </div>
+      </a>
+   % endfor
+</div>
+
+
+</%block>

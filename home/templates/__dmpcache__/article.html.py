@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1521922790.8805299
+_modified_time = 1521944947.147437
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/article.html'
 _template_uri = 'article.html'
@@ -31,10 +31,10 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         def middle_content():
             return render_middle_content(context._locals(__M_locals))
-        article = context.get('article', UNDEFINED)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def top_content():
             return render_top_content(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        article = context.get('article', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'top_content'):
@@ -56,9 +56,9 @@ def render_top_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         article = context.get('article', UNDEFINED)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def top_content():
             return render_top_content(context)
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n   <img id="main_img" src="')
         __M_writer(str( STATIC_URL ))
