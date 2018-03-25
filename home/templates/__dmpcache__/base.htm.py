@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1521947077.509324
+_modified_time = 1521948223.5885289
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm'
 _template_uri = 'base.htm'
@@ -42,7 +42,7 @@ def render_body(context,**pageargs):
         
         __M_locals_builtin_stored = __M_locals_builtin()
         __M_locals.update(__M_dict_builtin([(__M_key, __M_locals_builtin_stored[__M_key]) for __M_key in ['catagories'] if __M_key in __M_locals_builtin_stored]))
-        __M_writer('\n        <title>Duck Code: The Journey</title>\n\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
+        __M_writer('\n        <title>Duck Code: My Journey & Learning</title>\n\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
         __M_writer('        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>\n\n')
         __M_writer('        <script src="/django_mako_plus/dmp-common.min.js"></script>\n        ')
         __M_writer(str( django_mako_plus.links(self) ))
@@ -55,7 +55,7 @@ def render_body(context,**pageargs):
             __M_writer('">')
             __M_writer(str( c.name ))
             __M_writer('</a>\n')
-        __M_writer('            </div>\n         </li>\n         <li class="nav-item">\n           <a class="nav-link" href="#">About Me</a>\n         </li>\n      </ul>\n      <!-- <form class="form-inline my-2 my-md-0">\n         <input class="form-control mr-sm-2" placeholder="Search" type="text">\n         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>\n      </form> -->\n      <div class="nav-item dropdown ">\n        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>\n        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">\n          <a class="dropdown-item" href="#">Login</a>\n          <a class="dropdown-item" href="#">Signup</a>\n        </div>\n     </div>\n     </div>\n  </nav>\n\n        <main>\n         <div class="row">\n           <div class="col-md-12" id="top-section">\n             ')
+        __M_writer('            </div>\n         </li>\n         <li class="nav-item">\n           <a class="nav-link" href="/about">About Me</a>\n         </li>\n      </ul>\n      <!-- <form class="form-inline my-2 my-md-0">\n         <input class="form-control mr-sm-2" placeholder="Search" type="text">\n         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>\n      </form> -->\n      <div class="nav-item dropdown ">\n        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>\n        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">\n          <a class="dropdown-item" href="#">Login</a>\n          <a class="dropdown-item" href="#">Signup</a>\n        </div>\n     </div>\n     </div>\n  </nav>\n\n        <main>\n         <div class="row">\n           <div class="col-md-12" id="top-section">\n             ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'top_content'):
             context['self'].top_content(**pageargs)
         

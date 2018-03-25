@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1521944947.147437
+_modified_time = 1521948118.4856708
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/article.html'
 _template_uri = 'article.html'
@@ -29,10 +29,10 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def middle_content():
-            return render_middle_content(context._locals(__M_locals))
         def top_content():
             return render_top_content(context._locals(__M_locals))
+        def middle_content():
+            return render_middle_content(context._locals(__M_locals))
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         article = context.get('article', UNDEFINED)
         __M_writer = context.writer()
@@ -55,10 +55,10 @@ def render_body(context,**pageargs):
 def render_top_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        article = context.get('article', UNDEFINED)
         def top_content():
             return render_top_content(context)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        article = context.get('article', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n   <img id="main_img" src="')
         __M_writer(str( STATIC_URL ))
@@ -81,7 +81,7 @@ def render_middle_content(context,**pageargs):
         __M_writer('\n   <h1>')
         __M_writer(str( article.title ))
         __M_writer('</h1>\n   <p id="article_author">by Patrik Drean</p>\n   <p id="article_datestamp">')
-        __M_writer(str( article.create_date.strftime('%B %d %Y') ))
+        __M_writer(str( article.create_date.strftime('%B %d, %Y') ))
         __M_writer('</p>\n   <p id="article_content">')
         __M_writer(str( article.content ))
         __M_writer('</p>\n')
