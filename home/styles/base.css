@@ -20,7 +20,9 @@ main {
     margin: 0;
     padding: 15px;
 }
-
+ul, ol {
+   list-style: none;
+}
 #dropdown01  {
    color: white !important;
 }
@@ -34,6 +36,9 @@ main {
    padding: 0;
    margin: 0;
 }
+.navbar-brand a:hover {
+   text-shadow: 1px 1px 1px  #71767c;
+}
 
 #nav {
    background-color: white !important;
@@ -46,7 +51,8 @@ main {
    font-size: 15px;
 }
 #nav a:hover {
-   color: pink;
+   color: #71767c;
+   text-shadow: 1px 1px 1px  #71767c;
 }
 #nav ul {
    margin: 0 auto;

@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1521922201.246737
+_modified_time = 1521937084.2724679
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/index.html'
 _template_uri = 'index.html'
@@ -31,12 +31,13 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def top_content():
-            return render_top_content(context._locals(__M_locals))
         recent_blogs = context.get('recent_blogs', UNDEFINED)
         str = context.get('str', UNDEFINED)
-        top_blogs = context.get('top_blogs', UNDEFINED)
+        categories = context.get('categories', UNDEFINED)
+        def top_content():
+            return render_top_content(context._locals(__M_locals))
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        top_blogs = context.get('top_blogs', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')
@@ -53,12 +54,13 @@ def render_body(context,**pageargs):
 def render_top_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        def top_content():
-            return render_top_content(context)
         recent_blogs = context.get('recent_blogs', UNDEFINED)
         str = context.get('str', UNDEFINED)
-        top_blogs = context.get('top_blogs', UNDEFINED)
+        categories = context.get('categories', UNDEFINED)
+        def top_content():
+            return render_top_content(context)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        top_blogs = context.get('top_blogs', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n\n<a href="/article/')
         __M_writer(str( recent_blogs[0].url ))
@@ -102,10 +104,19 @@ def render_top_content(context,**pageargs):
             __M_writer(str( b.title ))
             __M_writer('</h3>\n               <p class="recent_datestamp">by Patrik Drean - ')
             __M_writer(str( dtp.past_time(str(b.create_date)) ))
-            __M_writer('</p>\n               <p class="recent_description">')
+            __M_writer('</p>\n               <!--<p class="recent_description">')
             __M_writer(str( b.description ))
-            __M_writer('</p>\n            </div>\n         </div>\n      </a>\n')
-        __M_writer('</div>\n\n')
+            __M_writer('</p>-->\n            </div>\n         </div>\n      </a>\n')
+        __M_writer('</div>\n\n<div id="category_div_wrap">\n   <h2>Categories</h2>\n   <ul>\n')
+        for c in categories:
+            __M_writer('         <li>\n            <a href="/category/')
+            __M_writer(str( c.name ))
+            __M_writer('">\n               <div class="category_div">\n                     <p class="category_name">')
+            __M_writer(str( c.name ))
+            __M_writer('</p>\n                     <!--<p class="category_description">')
+            __M_writer(str( b.description ))
+            __M_writer('</p>-->\n               </div>\n            </a>\n         </li>\n')
+        __M_writer('   </ul>\n</div>\n\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -113,6 +124,6 @@ def render_top_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"17": 2, "30": 0, "41": 1, "42": 2, "47": 48, "53": 3, "63": 3, "64": 5, "65": 5, "66": 7, "67": 7, "68": 7, "69": 7, "70": 7, "71": 10, "72": 10, "73": 11, "74": 11, "75": 12, "76": 12, "77": 18, "78": 19, "79": 19, "80": 19, "81": 21, "82": 21, "83": 21, "84": 21, "85": 21, "86": 23, "87": 23, "88": 24, "89": 24, "90": 25, "91": 25, "92": 30, "93": 34, "94": 35, "95": 35, "96": 35, "97": 37, "98": 37, "99": 37, "100": 37, "101": 37, "102": 39, "103": 39, "104": 40, "105": 40, "106": 41, "107": 41, "108": 46, "114": 108}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"17": 2, "30": 0, "42": 1, "43": 2, "48": 64, "54": 3, "65": 3, "66": 5, "67": 5, "68": 7, "69": 7, "70": 7, "71": 7, "72": 7, "73": 10, "74": 10, "75": 11, "76": 11, "77": 12, "78": 12, "79": 18, "80": 19, "81": 19, "82": 19, "83": 21, "84": 21, "85": 21, "86": 21, "87": 21, "88": 23, "89": 23, "90": 24, "91": 24, "92": 25, "93": 25, "94": 30, "95": 34, "96": 35, "97": 35, "98": 35, "99": 37, "100": 37, "101": 37, "102": 37, "103": 37, "104": 39, "105": 39, "106": 40, "107": 40, "108": 41, "109": 41, "110": 46, "111": 51, "112": 52, "113": 53, "114": 53, "115": 55, "116": 55, "117": 56, "118": 56, "119": 61, "125": 119}}
 __M_END_METADATA
 """

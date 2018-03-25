@@ -10,6 +10,56 @@
   }
 },
 {
+  "model": "home.category",
+  "pk": 2,
+  "fields": {
+    "name": "Deployment",
+    "filename": null,
+    "create_date": "2018-03-23T20:32:32.404",
+    "last_modified_date": "2018-03-23T20:32:56.366"
+  }
+},
+{
+  "model": "home.category",
+  "pk": 3,
+  "fields": {
+    "name": "Javascript",
+    "filename": null,
+    "create_date": "2018-03-23T20:32:32.404",
+    "last_modified_date": "2018-03-23T20:32:56.366"
+  }
+},
+{
+  "model": "home.category",
+  "pk": 4,
+  "fields": {
+    "name": "Interviewing",
+    "filename": null,
+    "create_date": "2018-03-23T20:32:32.404",
+    "last_modified_date": "2018-03-23T20:32:56.366"
+  }
+},
+{
+  "model": "home.category",
+  "pk": 5,
+  "fields": {
+    "name": "Personal",
+    "filename": null,
+    "create_date": "2018-03-23T20:32:32.404",
+    "last_modified_date": "2018-03-23T20:32:56.366"
+  }
+},
+{
+  "model": "home.category",
+  "pk": 6,
+  "fields": {
+    "name": "Soft Skills",
+    "filename": null,
+    "create_date": "2018-03-23T20:32:32.404",
+    "last_modified_date": "2018-03-23T20:32:56.366"
+  }
+},
+{
   "model": "home.blog",
   "pk": 1,
   "fields": {
