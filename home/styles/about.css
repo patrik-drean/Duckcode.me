@@ -24,9 +24,18 @@ h1 {
    margin: 10px auto;
 }
 h2 {
-   font-size: 22px;
+   font-size: 30px;
    font-family: Acme-Regular;
    text-align: center;
 }
 p {
+}
+#about_img_div {
+	margin: 20px auto 60px auto;
+	text-align: center;
+}
+.about_img {
+	width: 300px;
+	text-align: center;
+	margin: 0 20px;
 }
