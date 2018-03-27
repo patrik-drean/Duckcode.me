@@ -115,12 +115,84 @@
 },
 {
   "model": "home.blog",
-  "pk": 4,
+  "pk": 7,
   "fields": {
-    "title": "Deploy to Heroku with Dependencies",
+    "title": "Deploy to Heroku with Dependencies in Django",
     "url": "how_to_deploy_to_heroku",
     "description": "It's easy to deploy to a site like Heroku when you follow the standard procedure. What happens when you're using a custom framework?",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit.",
+    "content": "
+                 <p>Programming already has its fair share of bugs and headaches. When it comes to
+               deploying a project this pain only multiplies. This is a walkthrough on how to deploy
+               to Heroku when dependencies(e.g., custom frameworks, libraries, etc.) are required for your
+               project. Using <a href='http://django-mako-plus.readthedocs.io/about.html' target='_blank'>
+               Django-Mako-Plus</a>, a custom python framework, we will show how you can deploy your
+               project with a framework that isn't officially supported by Heroku.
+             </p>
+             <h2>Initial Setup</h2>
+
+               <p>
+               <ul>
+                 <li>
+                   Sign up for a
+                   <a href='https://signup.heroku.com/dc' target='_blank'>Heroku</a> account
+                 </li>
+                 <li>
+                   Setup up
+                   <a href='https://help.github.com/articles/set-up-git/' target='_blank'>git</a>
+                   in your project
+                 </li>
+                 <li>
+                   Install
+                   <a href='http://www.postgresqltutorial.com/install-postgresql/' target='_blank'>
+                           postgresql
+                       </a>
+                 </li>
+                 <li>
+                   Run the following in terminal (Learn about pip
+                   <a href='http://www.pythonforbeginners.com/pip/' target='_blank'>here</a>):
+                 </li>
+               </ul>
+               <figure>
+                 <pre>
+                      <code class='language-python' contenteditable spellcheck='false' >pip install pipenv</code>
+                      </pre>
+               </figure>
+             </p>
+
+             <h2 class='small_margin'>Download Heroku tools</h2>
+             <p> The tools can be found
+               <a href='https://devcenter.heroku.com/articles/getting-started-with-python#set-up'
+                 target='_blank'> here </a>.
+                 Download the appropriate package for your machine (i.e., Windows, Mac, etc.)
+             </p>
+             <p>Once downloaded, login to your heroku account in terminal. </p>
+
+             <figure>
+              <pre>
+              <code class='language-python' contenteditable spellcheck='false' >heroku login</code>
+              </pre>
+              </figure>
+
+              <p>The following prompt should appear.</p>
+
+              <figure>
+               <pre>
+               <code class='language-python line-numbers' contenteditable spellcheck='false' >Enter your Heroku credentials:
+       Email: myemail@domain.com
+       Password: ********** </code>
+               </pre>
+               </figure>
+
+               <h2 class='small_margin'>Install Heroku</h2>
+               <p>Once you have git installed in your project, you can create a Heroku app.</p>
+               <figure>
+              <pre>
+              <code class='language-python' contenteditable spellcheck='false' >heroku create myNewApp</code>
+              </pre>
+              </figure>
+              <p>In this case I named my app 'myNewApp'. If no name is indicated, Heroku
+              automatically assigns a random name.</p>
+    ",
     "create_date": "2018-03-23T17:31:29.037",
     "last_modified_date": "2018-03-23T17:31:29.037",
     "filename": "heroku_deploying_custom_framework.jpg",
@@ -167,8 +239,8 @@
     </figure>
 
     Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit. ",
-    "create_date": "2018-03-24T20:40:23.404",
-    "last_modified_date": "2018-03-24T20:43:23.404",
+    "create_date": "2018-03-26T20:40:23.404",
+    "last_modified_date": "2018-03-26T20:43:23.404",
     "filename": "time_elapsed_python.jpg",
     "alt_text": "watch showing elapsed time",
     "top_post": true,

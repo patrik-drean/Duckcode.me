@@ -7,6 +7,147 @@
    <h1>${ article.title }</h1>
    <p id="article_author">by Patrik Drean</p>
    <p id="article_datestamp">${ article.create_date.strftime('%B %d, %Y') }</p>
-   <p id="article_content">${ article.content }</p>
+   <!--<div id="article_content">${ article.content}</div>-->
+   <div id="article_content">
+     <p>Programming already has its fair share of bugs and headaches. When it comes to
+   deploying a project this pain only multiplies. This is a walkthrough on how to deploy
+   to Heroku when dependencies(e.g., custom frameworks, libraries, etc.) are required for your
+   project. Using <a href='http://django-mako-plus.readthedocs.io/about.html' target='_blank'>
+   Django-Mako-Plus</a>, a custom python framework, we will show how you can deploy your
+   project with a framework that isn't officially supported by Heroku.
+ </p>
+ <h2>Initial Setup</h2>
 
+   <p>
+   <ul>
+     <li>
+       Sign up for a
+       <a href='https://signup.heroku.com/dc' target='_blank'>Heroku</a> account
+     </li>
+     <li>
+       Setup up
+       <a href='https://help.github.com/articles/set-up-git/' target='_blank'>git</a>
+       in your project
+     </li>
+     <li>
+       Install
+       <a href='http://www.postgresqltutorial.com/install-postgresql/' target='_blank'>
+               postgresql
+           </a>
+     </li>
+     <li>
+       Run the following in terminal (Learn about pip
+       <a href='http://www.pythonforbeginners.com/pip/' target='_blank'>here</a>):
+     </li>
+   </ul>
+   <figure>
+     <pre>
+          <code class='language-python' contenteditable spellcheck='false' >pip install pipenv</code>
+          </pre>
+   </figure>
+ </p>
+
+ <h2 class='small_margin'>Download Heroku tools</h2>
+ <p> The tools can be found
+   <a href='https://devcenter.heroku.com/articles/getting-started-with-python#set-up'
+     target='_blank'> here</a>.
+     Download the appropriate package for your machine (i.e., Windows, Mac, etc.)
+ </p>
+ <p>Once downloaded, login to your heroku account in terminal. </p>
+
+ <figure>
+  <pre>
+  <code class='language-python' contenteditable spellcheck='false' >heroku login</code>
+  </pre>
+  </figure>
+
+  <p>The following prompt should appear.</p>
+
+  <figure>
+   <pre>
+   <code class='language-python line-numbers' contenteditable spellcheck='false' >Enter your Heroku credentials:
+Email: myemail@domain.com
+Password: ********** </code>
+   </pre>
+   </figure>
+
+   <h2 class='small_margin'>Install Heroku to the Project</h2>
+   <p>Once you have git installed in your project, you can create a Heroku app.</p>
+   <figure>
+  <pre>
+  <code class='language-python' contenteditable spellcheck='false' >heroku create myNewApp</code>
+  </pre>
+  </figure>
+  <p>In this case I named my app 'myNewApp'. If no name is indicated, Heroku
+  automatically assigns a random name.</p>
+
+  <h2>Define a Procfile</h2>
+  <p>The
+    <a href='https://devcenter.heroku.com/articles/getting-started-with-python#define-a-procfile'
+    target="_blank">Procfile</a>
+     declares what command should be run to start your app. It's an empty text file
+     we create (with no extention) in the root of our project. It has one line of code.
+   </p>
+   <figure>
+       <pre>
+       <code class='language-python' contenteditable spellcheck='false' >web: gunicorn myProjectName.wsgi --log-file -</code>
+       </pre>
+       </figure>
+   <p>
+     Be sure to update it to your project name. In this case, my Django project
+     is called 'myProjectName'.
+   </p>
+
+
+   <h2>Define a Pipfile</h2>
+   <p>
+     This step is crucial. A Pipfile is used by Heroku to pip install all the
+     necessary packages onto the Heroku server so that your app can run online
+     as well as it does locally. We create this app in the root of the project as
+     a text file (with no extension). Here is an example of what should be included
+     in the Pipfile.
+   </p>
+   <figure>
+       <pre>
+       <code class='language-python line-numbers' contenteditable spellcheck='false'>
+       [[source]]
+
+       url = "https://pypi.python.org/simple"
+       verify_ssl = true
+
+
+       [packages]
+
+       django = "*"
+       dj-database-url = "*"
+       gunicorn = "*"
+       psycopg2 = "*"
+       django-heroku = "*"
+       django-mako-plus = "*"
+       whitenoise = "*"
+       django-username-email = "*"
+       docopt = "*"
+       pipenv = "*"
+       ptpython = "*"
+       python-dateutil = "*"
+       pytz = "*"
+       requests = "*"
+       six = "*"
+       urllib3 = "*"
+
+
+
+       [requires]
+
+       python_version = "3.6"
+</code>
+       </pre>
+       </figure>
+
+</div>
 </%block>
+<!--
+*introduction
+*set-up
+*
+-->

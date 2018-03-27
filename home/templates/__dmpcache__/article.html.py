@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1522075712.1855302
+_modified_time = 1522159282.316728
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/article.html'
 _template_uri = 'article.html'
@@ -30,11 +30,11 @@ def render_body(context,**pageargs):
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        def middle_content():
+            return render_middle_content(context._locals(__M_locals))
         def top_content():
             return render_top_content(context._locals(__M_locals))
         article = context.get('article', UNDEFINED)
-        def middle_content():
-            return render_middle_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'top_content'):
@@ -46,7 +46,7 @@ def render_body(context,**pageargs):
             context['self'].middle_content(**pageargs)
         
 
-        __M_writer('\n')
+        __M_writer('\n<!--\n*introduction\n*set-up\n*\n-->\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -56,9 +56,9 @@ def render_top_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        article = context.get('article', UNDEFINED)
         def top_content():
             return render_top_content(context)
+        article = context.get('article', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n   <img id="main_img" src="')
         __M_writer(str( STATIC_URL ))
@@ -74,17 +74,17 @@ def render_top_content(context,**pageargs):
 def render_middle_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        article = context.get('article', UNDEFINED)
         def middle_content():
             return render_middle_content(context)
+        article = context.get('article', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n   <h1>')
         __M_writer(str( article.title ))
         __M_writer('</h1>\n   <p id="article_author">by Patrik Drean</p>\n   <p id="article_datestamp">')
         __M_writer(str( article.create_date.strftime('%B %d, %Y') ))
-        __M_writer('</p>\n   <p id="article_content">')
-        __M_writer(str( article.content ))
-        __M_writer('</p>\n\n')
+        __M_writer('</p>\n   <!--<div id="article_content">')
+        __M_writer(str( article.content))
+        __M_writer('</div>-->\n   <div id="article_content">\n     <p>Programming already has its fair share of bugs and headaches. When it comes to\n   deploying a project this pain only multiplies. This is a walkthrough on how to deploy\n   to Heroku when dependencies(e.g., custom frameworks, libraries, etc.) are required for your\n   project. Using <a href=\'http://django-mako-plus.readthedocs.io/about.html\' target=\'_blank\'>\n   Django-Mako-Plus</a>, a custom python framework, we will show how you can deploy your\n   project with a framework that isn\'t officially supported by Heroku.\n </p>\n <h2>Initial Setup</h2>\n\n   <p>\n   <ul>\n     <li>\n       Sign up for a\n       <a href=\'https://signup.heroku.com/dc\' target=\'_blank\'>Heroku</a> account\n     </li>\n     <li>\n       Setup up\n       <a href=\'https://help.github.com/articles/set-up-git/\' target=\'_blank\'>git</a>\n       in your project\n     </li>\n     <li>\n       Install\n       <a href=\'http://www.postgresqltutorial.com/install-postgresql/\' target=\'_blank\'>\n               postgresql\n           </a>\n     </li>\n     <li>\n       Run the following in terminal (Learn about pip\n       <a href=\'http://www.pythonforbeginners.com/pip/\' target=\'_blank\'>here</a>):\n     </li>\n   </ul>\n   <figure>\n     <pre>\n          <code class=\'language-python\' contenteditable spellcheck=\'false\' >pip install pipenv</code>\n          </pre>\n   </figure>\n </p>\n\n <h2 class=\'small_margin\'>Download Heroku tools</h2>\n <p> The tools can be found\n   <a href=\'https://devcenter.heroku.com/articles/getting-started-with-python#set-up\'\n     target=\'_blank\'> here</a>.\n     Download the appropriate package for your machine (i.e., Windows, Mac, etc.)\n </p>\n <p>Once downloaded, login to your heroku account in terminal. </p>\n\n <figure>\n  <pre>\n  <code class=\'language-python\' contenteditable spellcheck=\'false\' >heroku login</code>\n  </pre>\n  </figure>\n\n  <p>The following prompt should appear.</p>\n\n  <figure>\n   <pre>\n   <code class=\'language-python line-numbers\' contenteditable spellcheck=\'false\' >Enter your Heroku credentials:\nEmail: myemail@domain.com\nPassword: ********** </code>\n   </pre>\n   </figure>\n\n   <h2 class=\'small_margin\'>Install Heroku to the Project</h2>\n   <p>Once you have git installed in your project, you can create a Heroku app.</p>\n   <figure>\n  <pre>\n  <code class=\'language-python\' contenteditable spellcheck=\'false\' >heroku create myNewApp</code>\n  </pre>\n  </figure>\n  <p>In this case I named my app \'myNewApp\'. If no name is indicated, Heroku\n  automatically assigns a random name.</p>\n\n  <h2>Define a Procfile</h2>\n  <p>The\n    <a href=\'https://devcenter.heroku.com/articles/getting-started-with-python#define-a-procfile\'\n    target="_blank">Procfile</a>\n     declares what command should be run to start your app. It\'s an empty text file\n     we create (with no extention) in the root of our project. It has one line of code.\n   </p>\n   <figure>\n       <pre>\n       <code class=\'language-python\' contenteditable spellcheck=\'false\' >web: gunicorn myProjectName.wsgi --log-file -</code>\n       </pre>\n       </figure>\n   <p>\n     Be sure to update it to your project name. In this case, my Django project\n     is called \'myProjectName\'.\n   </p>\n\n\n   <h2>Define a Pipfile</h2>\n   <p>\n     This step is crucial. A Pipfile is used by Heroku to pip install all the\n     necessary packages onto the Heroku server so that your app can run online\n     as well as it does locally. We create this app in the root of the project as\n     a text file (with no extension). Here is an example of what should be included\n     in the Pipfile.\n   </p>\n   <figure>\n       <pre>\n       <code class=\'language-python line-numbers\' contenteditable spellcheck=\'false\'>\n       [[source]]\n\n       url = "https://pypi.python.org/simple"\n       verify_ssl = true\n\n\n       [packages]\n\n       django = "*"\n       dj-database-url = "*"\n       gunicorn = "*"\n       psycopg2 = "*"\n       django-heroku = "*"\n       django-mako-plus = "*"\n       whitenoise = "*"\n       django-username-email = "*"\n       docopt = "*"\n       pipenv = "*"\n       ptpython = "*"\n       python-dateutil = "*"\n       pytz = "*"\n       requests = "*"\n       six = "*"\n       urllib3 = "*"\n\n\n\n       [requires]\n\n       python_version = "3.6"\n</code>\n       </pre>\n       </figure>\n\n</div>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -92,6 +92,6 @@ def render_middle_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/article.html", "uri": "article.html", "source_encoding": "utf-8", "line_map": {"28": 0, "39": 1, "44": 5, "49": 12, "55": 2, "63": 2, "64": 3, "65": 3, "66": 3, "67": 3, "68": 3, "74": 6, "81": 6, "82": 7, "83": 7, "84": 9, "85": 9, "86": 10, "87": 10, "93": 87}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/article.html", "uri": "article.html", "source_encoding": "utf-8", "line_map": {"28": 0, "39": 1, "44": 5, "49": 148, "55": 2, "63": 2, "64": 3, "65": 3, "66": 3, "67": 3, "68": 3, "74": 6, "81": 6, "82": 7, "83": 7, "84": 9, "85": 9, "86": 10, "87": 10, "93": 87}}
 __M_END_METADATA
 """

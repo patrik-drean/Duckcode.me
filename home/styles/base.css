@@ -61,6 +61,17 @@ ul, ol {
    margin: 0 10px;
 }
 
-a:visited {
-   color: inherit;
+p a, li a {
+  color: #358CCB;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+p a:visited, p a:active, p a:link{
+  color: #358CCB;
+  text-decoration: none;
+}
+p a:hover {
+  text-decoration: none;
+  color: #103570;
 }
