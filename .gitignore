@@ -5,4 +5,5 @@ __pycache__/
 __dmpcache__/
 .cached_templates/
 venv/
+.DS_Store
 )
