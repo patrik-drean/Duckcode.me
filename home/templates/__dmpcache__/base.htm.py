@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1522197520.833248
+_modified_time = 1522199096.680636
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm'
 _template_uri = 'base.htm'
@@ -22,18 +22,18 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        def footer_content():
+            return render_footer_content(context._locals(__M_locals))
         def middle_content():
             return render_middle_content(context._locals(__M_locals))
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
         def top_content():
             return render_top_content(context._locals(__M_locals))
         def left_content():
             return render_left_content(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         self = context.get('self', UNDEFINED)
-        def footer_content():
-            return render_footer_content(context._locals(__M_locals))
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\n<html>\n    <meta charset="UTF-8">\n    <head>\n      ')
         __M_writer('\n      ')
@@ -42,7 +42,7 @@ def render_body(context,**pageargs):
         
         __M_locals_builtin_stored = __M_locals_builtin()
         __M_locals.update(__M_dict_builtin([(__M_key, __M_locals_builtin_stored[__M_key]) for __M_key in ['catagories'] if __M_key in __M_locals_builtin_stored]))
-        __M_writer('\n        <title>Duck Code: My Journey & Learning</title>\n\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
+        __M_writer('\n        <title>Duck Code: My Journey & Learning</title>\n        <meta description="A development blog dedicated to sharing lessons learned." />\n        <meta charset="UTF-8">\n        <meta name="viewport" content="width=device-width; initial-scale=1.0;">\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
         __M_writer('        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>\n\n')
         __M_writer('        <script src="/django_mako_plus/dmp-common.min.js"></script>\n        ')
         __M_writer(str( django_mako_plus.links(self) ))
@@ -143,6 +143,6 @@ def render_footer_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 6, "19": 7, "21": 0, "38": 2, "39": 6, "40": 7, "41": 8, "45": 8, "46": 15, "47": 18, "48": 19, "49": 19, "50": 28, "51": 28, "52": 38, "53": 39, "54": 39, "55": 39, "56": 39, "57": 39, "58": 41, "63": 55, "68": 60, "73": 63, "78": 66, "83": 71, "89": 55, "100": 60, "111": 63, "122": 66, "133": 71, "144": 133}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 6, "19": 7, "21": 0, "38": 2, "39": 6, "40": 7, "41": 8, "45": 8, "46": 17, "47": 20, "48": 21, "49": 21, "50": 30, "51": 30, "52": 40, "53": 41, "54": 41, "55": 41, "56": 41, "57": 41, "58": 43, "63": 57, "68": 62, "73": 65, "78": 68, "83": 73, "89": 57, "100": 62, "111": 65, "122": 68, "133": 73, "144": 133}}
 __M_END_METADATA
 """
