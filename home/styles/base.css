@@ -68,7 +68,7 @@ p a, li a {
 }
 
 a:visited, a:active, a:link{
-  color: inherit;
+  color: normal;
   text-decoration: none;
 }
 p a:hover {
