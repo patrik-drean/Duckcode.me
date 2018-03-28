@@ -16,26 +16,40 @@ h1 {
    padding: 0 0 18px 0;
    margin: 0 auto;
    text-align: center;
-}
-#profile_pic {
-   width: 250px;
-   border-radius: 50%;
-   display: block;
-   margin: 10px auto;
+	 display: none;
 }
 h2 {
-   font-size: 30px;
-   font-family: Acme-Regular;
+		color: #358ccb;
+   font-size: 2em;
+	 margin: 0 0 1em 0;
+   font-family: ArchitectsDaughter;
    text-align: center;
 }
-p {
-}
+
 #about_img_div {
 	margin: 60px auto 60px auto;
 	text-align: center;
 }
 .about_img {
-	width: 300px;
+	width: 150px;
 	text-align: center;
 	margin: 0 20px;
+
+}
+#profile_pic {
+   width: 150px;
+   border-radius: 50%;
+   margin: 0 15px;
+	 float: left;
+}
+#bio_div {
+	display: table;
+	height: 200px;
+	width: 600px;
+
+}
+p {
+	font-size: 1.3em;
+	display: table-cell;
+	vertical-align: middle;
 }
