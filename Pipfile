@@ -15,13 +15,14 @@ django-mako-plus = "*"
 whitenoise = "*"
 django-username-email = "*"
 docopt = "*"
-pipenv = "*
+pipenv = "*"
 ptpython = "*"
 python-dateutil = "*"
 pytz = "*"
 requests = "*"
 six = "*"
 urllib3 = "*"
+pyyaml = "*"
 
 
 
