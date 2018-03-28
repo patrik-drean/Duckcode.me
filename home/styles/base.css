@@ -77,16 +77,17 @@ p a:hover {
 }
 
 /***************************** Mobile ***********************/
-@media (max-width: 376px)
+@media (max-width: 768px)
 {
-  #nav {
-    height: 3em;
-  }
   .top_blog_div, .recent_blog_div, .category_blog_div {
-    display: block;
-    width: 100%;
+    display: block !important;
+    width: 100% !important;
+  }
+  .top_img, .top_message_div, .recent_img, .recent_message_div, .category_img, .category_message_div  {
+    width: 100% !important;
   }
   #duck_logo {
-    width: 100px;
+    width: 60px;
   }
+
 }
