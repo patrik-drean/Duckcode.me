@@ -77,7 +77,7 @@ p a:hover {
 }
 
 /***************************** Mobile ***********************/
-@media (max-width: 576px)
+@media (max-width: 376px)
 {
   #nav {
     height: 3em;
