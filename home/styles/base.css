@@ -75,3 +75,18 @@ p a:hover {
   text-decoration: none;
   color: #103570;
 }
+
+/***************************** Mobile ***********************/
+@media (max-width: 576px)
+{
+  #nav {
+    height: 3em;
+  }
+  .top_blog_div, .recent_blog_div, .category_blog_div {
+    display: block;
+    width: 100%;
+  }
+  #duck_logo {
+    width: 100px;
+  }
+}

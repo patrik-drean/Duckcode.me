@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1522118130.269204
+_modified_time = 1522196683.660453
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm'
 _template_uri = 'base.htm'
@@ -24,15 +24,15 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         def footer_content():
             return render_footer_content(context._locals(__M_locals))
+        def left_content():
+            return render_left_content(context._locals(__M_locals))
         def right_content():
             return render_right_content(context._locals(__M_locals))
-        def middle_content():
-            return render_middle_content(context._locals(__M_locals))
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def top_content():
             return render_top_content(context._locals(__M_locals))
-        def left_content():
-            return render_left_content(context._locals(__M_locals))
+        def middle_content():
+            return render_middle_content(context._locals(__M_locals))
         self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\n<html>\n    <meta charset="UTF-8">\n    <head>\n      ')
@@ -46,16 +46,16 @@ def render_body(context,**pageargs):
         __M_writer('        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>\n\n')
         __M_writer('        <script src="/django_mako_plus/dmp-common.min.js"></script>\n        ')
         __M_writer(str( django_mako_plus.links(self) ))
-        __M_writer('\n\n    </head>\n    <body>\n\n      <nav id = \'nav\' class="navbar navbar-toggleable-md navbar-inverse bg-inverse">\n     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">\n      <span class="navbar-toggler-icon"></span>\n     </button>\n     <a class="navbar-brand" href="/">\n        <img id=\'duck_logo\' src="')
+        __M_writer('\n\n    </head>\n    <body>\n<nav id=\'nav\' class="navbar navbar-toggleable-sm navbar-light">\n  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">\n      <span class="navbar-toggler-icon"></span>\n     </button>\n  <a class="navbar-brand" href="/">\n        <img id=\'duck_logo\' src="')
         __M_writer(str(STATIC_URL))
-        __M_writer('home/media/img/duck_logo.png" />\n     </a>\n\n     <div class="collapse navbar-collapse" id="navbarsExampleDefault">\n      <ul class="navbar-nav mr-auto">\n         <li class="nav-item">\n           <a class="nav-link" href="/category/recent">Recent Posts</a>\n         </li>\n         <li class="nav-item dropdown">\n            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Blog Categories</a>\n            <div class="dropdown-menu">\n')
+        __M_writer('home/media/img/duck_logo.png" />\n     </a>\n  <div class="collapse navbar-collapse" id="navbarsExampleDefault">\n    <ul class="navbar-nav mr-auto">\n      <li class="nav-item">\n        <a class="nav-link" href="/category/recent">Recent Posts</a>\n      </li>\n      <li class="nav-item dropdown">\n        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Blog Categories</a>\n        <div class="dropdown-menu">\n')
         for c in catagories:
-            __M_writer('                  <a class="dropdown-item" href="/category/')
+            __M_writer('          <a class="dropdown-item" href="/category/')
             __M_writer(str(c.url))
             __M_writer('">')
             __M_writer(str( c.name ))
             __M_writer('</a>\n')
-        __M_writer('            </div>\n         </li>\n         <li class="nav-item">\n           <a class="nav-link" href="/about">About Me</a>\n         </li>\n      </ul>\n      <!-- <form class="form-inline my-2 my-md-0">\n         <input class="form-control mr-sm-2" placeholder="Search" type="text">\n         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>\n      </form>\n      <div class="nav-item dropdown ">\n        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>\n        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">\n          <a class="dropdown-item" href="#">Login</a>\n          <a class="dropdown-item" href="#">Signup</a>\n        </div>\n     </div>-->\n     </div>\n  </nav>\n\n        <main>\n         <div class="row">\n           <div class="col-md-12" id="top-section">\n             ')
+        __M_writer('        </div>\n      </li>\n      <li class="nav-item">\n        <a class="nav-link" href="/about">About Me</a>\n      </li>\n    </ul>\n  </div>\n</nav>\n\n\n\n        <main>\n         <div class="row">\n           <div class="col-md-12" id="top-section">\n             ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'top_content'):
             context['self'].top_content(**pageargs)
         
@@ -143,6 +143,6 @@ def render_footer_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 6, "19": 7, "21": 0, "38": 2, "39": 6, "40": 7, "41": 8, "45": 8, "46": 15, "47": 18, "48": 19, "49": 19, "50": 29, "51": 29, "52": 40, "53": 41, "54": 41, "55": 41, "56": 41, "57": 41, "58": 43, "63": 66, "68": 71, "73": 74, "78": 77, "83": 82, "89": 66, "100": 71, "111": 74, "122": 77, "133": 82, "144": 133}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 6, "19": 7, "21": 0, "38": 2, "39": 6, "40": 7, "41": 8, "45": 8, "46": 15, "47": 18, "48": 19, "49": 19, "50": 28, "51": 28, "52": 38, "53": 39, "54": 39, "55": 39, "56": 39, "57": 39, "58": 41, "63": 55, "68": 60, "73": 63, "78": 66, "83": 71, "89": 55, "100": 60, "111": 63, "122": 66, "133": 71, "144": 133}}
 __M_END_METADATA
 """
