@@ -45,21 +45,15 @@ h2 {
 	margin: 2em 0 .5em 0;
 }
 .small_margin {
-	margin: .8em 0 .5em 0 ;
+	margin-top: .8em;
 }
 ul {
 	list-style:disc;
 }
 
-ul a:visited, ul a:active, ul a:link{
-  color: #358CCB;
-  text-decoration: none;
+.p_indent {
+	margin-left: 1em;
 }
-ul a:hover {
-  text-decoration: none;
-  color: #103570;
-}
-
 /* PrismJS 1.13.0
 http://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript+aspnet+bash+csharp+git+java+json+sql+python+sass&plugins=line-numbers+toolbar+copy-to-clipboard */
 /**
@@ -93,7 +87,7 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
 	position: relative;
-	margin: .5em 0;
+	margin: 0;
 	overflow: visible;
 	padding: 0;
 }

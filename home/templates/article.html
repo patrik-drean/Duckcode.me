@@ -84,7 +84,7 @@ Password: ********** </code>
   <h2>Define a Procfile</h2>
   <p>The
     <a href='https://devcenter.heroku.com/articles/getting-started-with-python#define-a-procfile'
-    target="_blank">Procfile</a>
+    target='_blank'>Procfile</a>
      declares what command should be run to start your app. It's an empty text file
      we create (with no extention) in the root of our project. It has one line of code.
    </p>
@@ -103,7 +103,7 @@ Password: ********** </code>
    <p>
      This step is crucial. A Pipfile is used by Heroku to pip install all the
      necessary packages onto the Heroku server so that your app can run online
-     as well as it does locally. We create this app in the root of the project as
+     as well as it does locally. We create this file in the root of the project as
      a text file (with no extension). Here is an example of what should be included
      in the Pipfile.
    </p>
@@ -112,39 +112,154 @@ Password: ********** </code>
        <code class='language-python line-numbers' contenteditable spellcheck='false'>
        [[source]]
 
-       url = "https://pypi.python.org/simple"
+       url = \"https://pypi.python.org/simple\"
        verify_ssl = true
 
 
        [packages]
 
-       django = "*"
-       dj-database-url = "*"
-       gunicorn = "*"
-       psycopg2 = "*"
-       django-heroku = "*"
-       django-mako-plus = "*"
-       whitenoise = "*"
-       django-username-email = "*"
-       docopt = "*"
-       pipenv = "*"
-       ptpython = "*"
-       python-dateutil = "*"
-       pytz = "*"
-       requests = "*"
-       six = "*"
-       urllib3 = "*"
+       django = \"*\"
+       dj-database-url = \"*\"
+       psycopg2 = \"*\"
+       gunicorn = \"*\"
+       whitenoise = \"*\"
+       django-mako-plus = \"*\"
+
 
 
 
        [requires]
 
-       python_version = "3.6"
+       python_version = \"3.6\"
 </code>
        </pre>
        </figure>
+       <p>An explanation of critical packages:</p>
+       <p class='p_indent'>django, dj-database-url, psycopg2 - these are standard packages in Django.</p>
+       <p class='p_indent'>
+         <a href='http://gunicorn.org' target='_blank'>gunicorn</a> -
+         This helps integrate Django projects into a web server.
+       </p>
+       <p class='p_indent'>
+         <a href='http://whitenoise.evans.io/en/stable/' target='_blank'>whitenoise</a> -
+         This helps translate static link work in the Heroku server folder.
+       </p>
+       <p class='p_indent'>
+         django-mako-plus - The custom framework package.
+       </p>
+       <p>
+         It's important to note that the '*' indicates the most current update of
+         that package. This can be hardcorded to a specific update (e.g., \"3.2\").
+       </p>
 
+       <h2>How to View Your Current Packages in Your Project</h2>
+       <p>
+          This command in the termnial displays all the packages currently installed
+          in your environment.
+       </p>
+       <figure>
+           <pre>
+           <code class='language-python' contenteditable spellcheck='false' >pip freeze</code>
+           </pre>
+       </figure>
+       <p>
+         This outputs the packages into a text file.
+       </p>
+       <figure>
+           <pre>
+           <code class='language-python' contenteditable spellcheck='false' >pip freeze > myTextFile.txt</code>
+           </pre>
+       </figure>
+
+       <h2 class='small_margin'>Create Pipfile.lock</h2>
+       Once the Pipfile is created correctly, run the following in the terminal:
+       <figure>
+           <pre>
+           <code class='language-python' contenteditable spellcheck='false' >pipenv lock</code>
+           </pre>
+       </figure>
+       <p class='note'>NOTE: you may need deactivate your virtual environment first.</p>
+
+       <h2>Change settings.py</h2>
+       <p>Update allowed hosts to the following. In this case, my domain name is
+       myWebsiteDomain.com.</p>
+       <figure>
+           <pre>
+           <code class='language-python' contenteditable spellcheck='false' >ALLOWED_HOSTS = ['myWebsiteDomain.com']</code>
+           </pre>
+       </figure>
+       <p>This allows any web server to access your project.</p>
+      <figure>
+        <pre>
+        <code class='language-python' contenteditable spellcheck='false' >ALLOWED_HOSTS = ['*']</code>
+        </pre>
+      </figure>
+      <p>Include whitenoise in the middleware.</p>
+      <figure>
+        <pre>
+        <code class='language-python line-numbers' contenteditable spellcheck='false' >MIDDLEWARE = [
+    . . .
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+  ]</code></pre>
+      </figure>
+
+      <h2>Ready to Deploy? Me too.</h2>
+      <figure>
+        <pre>
+        <code class='language-python' contenteditable spellcheck='false' >git push heroku master</code>
+        </pre>
+      </figure>
+      <p class='note'>
+        NOTE: Be sure you've committed all of your changes. Also be sure you're committing
+        on master.
+      </p>
+
+      <h2>Create a PostgreSQL Database</h2>
+      <p>
+        Create a free PostgreSQL database on Heroku's server.
+      </p>
+      <figure>
+          <pre>
+          <code class='language-python' contenteditable spellcheck='false' >heroku addons</code>
+          </pre>
+      </figure>
+      <p>
+        Check the status of your database.
+      </p>
+      <figure>
+          <pre>
+          <code class='language-python' contenteditable spellcheck='false' >heroku pg</code>
+          </pre>
+      </figure>
+
+      <h2 class='small_margin'>Update settings.py for the Database</h2>
+      <p>This should be included right after the database definition.
+        It's important to note that it's not necessary to remove your database
+        definition. Commit this and push it to the Heroku server.
+      </p>
+      <figure>
+          <pre>
+          <code class='language-python line-numbers' contenteditable spellcheck='false' >import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)</code>
+          </pre>
+    </figure>
+
+    <h2 class='small_margin'>Run Database Migrations on Heroku</h2>
+    <figure>
+  <pre>
+  <code class='language-python line-numbers' contenteditable spellcheck='false' >heroku run python manage.py makemigrations # Including the app name is optional
+heroku run python manage.py migrate </code>
+  </pre>
+</figure>
 </div>
+
+<h2 class='small_margin'>Done.</h2>
+<figure>
+  <pre>
+  <code class='language-python' contenteditable spellcheck='false' >heroku open</code>
+  </pre>
+</figure>
 </%block>
 <!--
 *introduction

@@ -7,6 +7,7 @@ from home import models as hmod
 @view_function
 def process_request(request, article_url = 'how_to_deploy_to_heroku'):
     article = hmod.Blog.objects.get(url = article_url)
+    article.content = article.content.replace('\"', '"')
     context = {
         'article': article,
     }

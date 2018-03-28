@@ -67,8 +67,8 @@ p a, li a {
   text-decoration: none;
 }
 
-p a:visited, p a:active, p a:link{
-  color: #358CCB;
+a:visited, a:active, a:link{
+  color: inherit;
   text-decoration: none;
 }
 p a:hover {
