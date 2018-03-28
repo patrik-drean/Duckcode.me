@@ -77,11 +77,17 @@ p a:hover {
 }
 
 /***************************** Mobile ***********************/
-@media (max-width: 1068px)
+@media (max-width: 768px)
 {
   .top_blog_div, .recent_blog_div, .category_blog_div {
     display: block !important;
     width: 100% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .top_blog_div_wrap, .recent_blog_div_wrap, .category_blog_div_wrap {
+    margin: 0 auto;
+    text-align: center;
   }
   .top_img, .top_message_div, .recent_img, .recent_message_div, .category_img, .category_message_div  {
     width: 100% !important;

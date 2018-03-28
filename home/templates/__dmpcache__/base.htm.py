@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1522199096.680636
+_modified_time = 1522199429.563922
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm'
 _template_uri = 'base.htm'
@@ -42,7 +42,7 @@ def render_body(context,**pageargs):
         
         __M_locals_builtin_stored = __M_locals_builtin()
         __M_locals.update(__M_dict_builtin([(__M_key, __M_locals_builtin_stored[__M_key]) for __M_key in ['catagories'] if __M_key in __M_locals_builtin_stored]))
-        __M_writer('\n        <title>Duck Code: My Journey & Learning</title>\n        <meta description="A development blog dedicated to sharing lessons learned." />\n        <meta charset="UTF-8">\n        <meta name="viewport" content="width=device-width; initial-scale=1.0;">\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
+        __M_writer('\n        <title>Duck Code: My Journey & Learning</title>\n        <meta description="A development blog dedicated to sharing lessons learned." />\n        <meta charset="UTF-8">\n        <meta name="viewport" content="width=device-width,initial-scale=1.0">\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
         __M_writer('        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>\n\n')
         __M_writer('        <script src="/django_mako_plus/dmp-common.min.js"></script>\n        ')
         __M_writer(str( django_mako_plus.links(self) ))

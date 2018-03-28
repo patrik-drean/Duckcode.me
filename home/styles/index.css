@@ -20,7 +20,7 @@ a {
    color: inherit;
 }
 h1 {
-   font-size: 27px;
+   font-size: 2em;
    font-family: ArchitectsDaughter;
    padding: 0 0 8px 0;
    margin: 18px 0 0 0;
@@ -74,7 +74,7 @@ p {
 }
 #highlight_description {
    text-align: left;
-   font-size: 20px;
+   font-size: 1.5em;
 }
 #highlight_featured_post {
    text-align: left;
@@ -190,4 +190,27 @@ p {
 }
 li {
 	display: inline-block;
+}
+
+/***************************** Mobile ***********************/
+@media (max-width: 768px)
+{
+
+	.category_shadow{
+		border-color: inherit;
+		box-shadow: inherit;
+	}
+	.shadow {
+	   box-shadow: inherit;
+	   text-shadow: inherit;
+	}
+	.shadow_text {
+	   text-shadow: inherit;
+	}
+	#highlight_message_div {
+	   font-size: 60%;
+		 padding: 5px;
+	}
+
+
 }
