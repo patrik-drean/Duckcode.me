@@ -197,19 +197,21 @@ li {
 {
 
 	.category_shadow{
-		border-color: inherit;
-		box-shadow: inherit;
+		border-color: normal;
+		box-shadow: normal;
 	}
 	.shadow {
-	   box-shadow: inherit;
-	   text-shadow: inherit;
+	   box-shadow: normal;
+	   text-shadow: normal;
 	}
 	.shadow_text {
 	   text-shadow: inherit;
 	}
 	#highlight_message_div {
-	   font-size: 60%;
-		 padding: 5px;
+	   font-size: 50%;
+		 padding: 0 5px;
+		 left: 1%;
+		 bottom: 2%;
 	}
 
 
