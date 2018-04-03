@@ -304,8 +304,9 @@
                        <code class='language-python line-numbers' contenteditable spellcheck='false' >
                        MIDDLEWARE = [\n
                        . . .\n
-                       'whitenoise.middleware.WhiteNoiseMiddleware',
-                 ]</code></pre>
+                       'whitenoise.middleware.WhiteNoiseMiddleware',\n
+                ]
+                </code></pre>
                      </figure>
 
                      <h2>Ready to Deploy? Me too.</h2>
