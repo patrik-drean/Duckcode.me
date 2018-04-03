@@ -253,7 +253,7 @@
                       </p>
                       <p>
                         It's important to note that the \"*\" indicates the most current update of
-                        that package. This can be hardcorded to a specific update (e.g., \"3.2\").
+                        that package. This can be hardcorded to a specific version (e.g., \"3.2\").
                       </p>
 
                       <h2>How to View Your Current Packages in Your Project</h2>
@@ -274,9 +274,12 @@
                           <code class='language-python' contenteditable spellcheck='false' >pip freeze > myTextFile.txt</code>
                           </pre>
                       </figure>
+                      <p>
+                        You can then look through your installed packages and include any necessary ones in your Pipfile under the [packages] section.
+                      </p>
 
-                      <h2 class='small_margin'>Create Pipfile.lock</h2>
-                      Once the Pipfile is created correctly, run the following in the terminal:
+                      <h2>Create Pipfile.lock</h2>
+                      Once the Pipfile is created correctly, run the following in the terminal. This will lock in your packages so Heroku can install them when you deploy.
                       <figure>
                           <pre>
                           <code class='language-python' contenteditable spellcheck='false' >pipenv lock</code>

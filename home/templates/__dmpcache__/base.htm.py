@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1522199429.563922
+_modified_time = 1522759698.543017
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm'
 _template_uri = 'base.htm'
@@ -22,20 +22,20 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        def top_content():
+            return render_top_content(context._locals(__M_locals))
         def footer_content():
             return render_footer_content(context._locals(__M_locals))
         def middle_content():
             return render_middle_content(context._locals(__M_locals))
-        def top_content():
-            return render_top_content(context._locals(__M_locals))
+        self = context.get('self', UNDEFINED)
         def left_content():
             return render_left_content(context._locals(__M_locals))
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        self = context.get('self', UNDEFINED)
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
         __M_writer = context.writer()
-        __M_writer('<!DOCTYPE html>\n<html>\n    <meta charset="UTF-8">\n    <head>\n      ')
+        __M_writer('<!DOCTYPE html>\n<html>\n    <meta charset="UTF-8">\n    <head>\n      <!-- Global site tag (gtag.js) - Google Analytics -->\n      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100806632-3"></script>\n      <script>\n        window.dataLayer = window.dataLayer || [];\n        function gtag(){dataLayer.push(arguments);}\n        gtag(\'js\', new Date());\n\n        gtag(\'config\', \'UA-100806632-3\');\n      </script>\n      ')
         __M_writer('\n      ')
         __M_writer('\n      ')
         catagories = hmod.Category.objects.all() 
@@ -143,6 +143,6 @@ def render_footer_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 6, "19": 7, "21": 0, "38": 2, "39": 6, "40": 7, "41": 8, "45": 8, "46": 17, "47": 20, "48": 21, "49": 21, "50": 30, "51": 30, "52": 40, "53": 41, "54": 41, "55": 41, "56": 41, "57": 41, "58": 43, "63": 57, "68": 62, "73": 65, "78": 68, "83": 73, "89": 57, "100": 62, "111": 65, "122": 68, "133": 73, "144": 133}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 15, "19": 16, "21": 0, "38": 2, "39": 15, "40": 16, "41": 17, "45": 17, "46": 26, "47": 29, "48": 30, "49": 30, "50": 39, "51": 39, "52": 49, "53": 50, "54": 50, "55": 50, "56": 50, "57": 50, "58": 52, "63": 66, "68": 71, "73": 74, "78": 77, "83": 82, "89": 66, "100": 71, "111": 74, "122": 77, "133": 82, "144": 133}}
 __M_END_METADATA
 """
