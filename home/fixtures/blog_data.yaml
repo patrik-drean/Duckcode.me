@@ -115,7 +115,23 @@
 },
 {
   "model": "home.blog",
-  "pk": 7,
+  "pk": 5,
+  "fields": {
+    "title": "How to Make a 5-Star Review with JavaScript",
+    "url": "five_star_review_javascript",
+    "description": "I couldn't find a good star review so I decided to just make one.",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla #facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit. <br /> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim # #facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. <br /> <br /> <div class = 'code'> &nbsp; if x > 3: <br>   &nbsp;&nbsp; print('this is great')</div>  <br /> <br /> <p> Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit. </p> ",
+    "create_date": "2018-03-24T07:40:23.404",
+    "last_modified_date": "2018-03-24T13:43:23.404",
+    "filename": "star_review.jpg",
+    "alt_text": "5 star review in java script",
+    "top_post": false,
+    "category": 3
+  }
+},
+{
+  "model": "home.blog",
+  "pk": 6,
   "fields": {
     "title": "Deploy to Heroku with Dependencies in Django",
     "url": "how_to_deploy_to_heroku",
@@ -382,44 +398,65 @@
 },
 {
   "model": "home.blog",
-  "pk": 5,
-  "fields": {
-    "title": "How to Make a 5-Star Review with JavaScript",
-    "url": "five_star_review_javascript",
-    "description": "I couldn't find a good star review so I decided to just make one.",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit. <br /> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. <br /> <br /> <div class = 'code'> &nbsp; if x > 3: <br>   &nbsp;&nbsp; print('this is great')</div>  <br /> <br /> <p> Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit. </p> ",
-    "create_date": "2018-03-24T07:40:23.404",
-    "last_modified_date": "2018-03-24T13:43:23.404",
-    "filename": "star_review.jpg",
-    "alt_text": "5 star review in java script",
-    "top_post": false,
-    "category": 3
-  }
-},
-{
-  "model": "home.blog",
-  "pk": 6,
+  "pk": 7,
   "fields": {
     "title": "Showing the elapsed time in Python",
     "url": "python_elapsed_time",
     "description": "Years, months, weeks, days, hours, and minutes. This shows the difference between now and a date in the past.",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit. <br /> <br />
+    "content": "
+         <figure>
+           <pre>
+           <code class='language-python line-numbers' contenteditable spellcheck='false' >from datetime import datetime, timedelta\nfrom dateutil import parser\n
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. <br /> <br />
-
-    <figure>
-    <figcaption></figcaption>
-    <pre>
-    <code class='language-python line-numbers' contenteditable spellcheck='false' >
-      if x > 3: \r
-         &nbsp; print('this is great')
-    </code>
-    </pre>
-    </figure>
-
-    Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit. ",
-    "create_date": "2018-03-26T20:40:23.404",
-    "last_modified_date": "2018-03-26T20:43:23.404",
+def past_time(old_date):\n
+   &nbsp;# Convert from a string into a datetime field\n
+   &nbsp;old_date = parser.parse(old_date)\n\n
+   &nbsp;# Find the difference in time between now and the old date\n
+   &nbsp;date_difference = datetime.now() - old_date\n\n
+   &nbsp;# Split the time difference into the different measurements\n
+   &nbsp;years, months, weeks, days, hours, minutes = (\n
+      &nbsp;&nbsp;&nbsp;date_difference.days // 365,\n
+      &nbsp;&nbsp;&nbsp;date_difference.days // 30,\n
+      &nbsp;&nbsp;&nbsp;date_difference.days // 7,\n
+      &nbsp;&nbsp;&nbsp;date_difference.days,\n
+      &nbsp;&nbsp;&nbsp;date_difference.seconds // 3600,\n
+      &nbsp;&nbsp;&nbsp;date_difference.seconds // 60 % 60\n
+    &nbsp;)\n\n
+    &nbsp;# Determine most accurate time measurement depending on how long ago\n
+   &nbsp;if years > 0:\n
+       &nbsp;&nbsp;&nbsp;time_elapsed = years\n
+       &nbsp;&nbsp;&nbsp;time_measure = 'year'\n
+   &nbsp;elif months > 0:\n
+      &nbsp;&nbsp;&nbsp;time_elapsed = months\n
+      &nbsp; &nbsp;&nbsp;time_measure = 'month'\n
+   &nbsp;elif weeks > 0:\n
+       &nbsp;&nbsp;&nbsp;time_elapsed = weeks\n
+       &nbsp;&nbsp;&nbsp;time_measure = 'week'\n
+   &nbsp;elif days > 0:\n
+       &nbsp;&nbsp;&nbsp;time_elapsed = days\n
+       &nbsp;&nbsp;&nbsp;time_measure = 'day'\n
+   &nbsp;elif hours > 0:\n
+      &nbsp; &nbsp;&nbsp;time_elapsed = hours\n
+      &nbsp; &nbsp;&nbsp;time_measure = 'hour'\n
+   &nbsp;elif minutes > 0:\n
+       &nbsp;&nbsp;&nbsp;time_elapsed = minutes\n
+      &nbsp; &nbsp;&nbsp;time_measure = 'minute'\n
+   &nbsp;else:\n
+       &nbsp;&nbsp;&nbsp;time_elapsed = ''\n
+       &nbsp;&nbsp;&nbsp;time_measure = 'Just now'\n\n
+   &nbsp;# Determine if time_measure needs to be pluralized\n
+   &nbsp;if time_elapsed != '' and time_elapsed > 1:\n
+       &nbsp;&nbsp;time_measure += 's'\n\n
+   &nbsp;return '{} {} ago'.format(time_elapsed, time_measure)\n\n
+# Main program to run the function\n
+old_date = '2018-03-23T21:44:23.404'\n
+past_time(old_date) # Output: '2 weeks ago'\n
+</code>
+           </pre>
+         </figure>
+         ",
+    "last_modified_date": "2018-04-7T20:43:23.404",
+    "create_date": "2018-04-7T20:43:23.404",
     "filename": "time_elapsed_python.jpg",
     "alt_text": "watch showing elapsed time",
     "top_post": true,
