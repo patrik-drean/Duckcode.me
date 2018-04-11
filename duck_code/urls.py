@@ -21,6 +21,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     # urls for any third-party apps go here
+    url(r'^.well-known/acme-challenge/.*$',
+        views.acme_challenge, name='acme-challenge'),
 
     # the DMP router - if DEFAULT_HOMEPAGE is set, this should be the last pattern (the wildcards match everything)
     url('', include('django_mako_plus.urls')),
