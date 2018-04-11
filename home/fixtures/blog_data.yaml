@@ -436,14 +436,14 @@ def past_time(old_date):\n
        &nbsp;&nbsp;&nbsp;time_elapsed = days\n
        &nbsp;&nbsp;&nbsp;time_measure = 'day'\n
    &nbsp;elif hours > 0:\n
-      &nbsp; &nbsp;&nbsp;time_elapsed = hours\n
-      &nbsp; &nbsp;&nbsp;time_measure = 'hour'\n
+       &nbsp; &nbsp;&nbsp;time_elapsed = hours\n
+       &nbsp; &nbsp;&nbsp;time_measure = 'hour'\n
    &nbsp;elif minutes > 0:\n
        &nbsp;&nbsp;&nbsp;time_elapsed = minutes\n
-      &nbsp; &nbsp;&nbsp;time_measure = 'minute'\n
+       &nbsp; &nbsp;&nbsp;time_measure = 'minute'\n
    &nbsp;else:\n
        &nbsp;&nbsp;&nbsp;time_elapsed = ''\n
-       &nbsp;&nbsp;&nbsp;time_measure = 'Just now'\n\n
+       &nbsp;&nbsp;&nbsp;time_measure = 'A few seconds'\n\n
    &nbsp;# Determine if time_measure needs to be pluralized\n
    &nbsp;if time_elapsed != '' and time_elapsed > 1:\n
        &nbsp;&nbsp;time_measure += 's'\n\n
@@ -460,7 +460,7 @@ past_time(old_date) # Output: '2 weeks ago'\n
     "filename": "time_elapsed_python.jpg",
     "alt_text": "watch showing elapsed time",
     "top_post": true,
-    "category": 2
+    "category": 1
   }
 }
 ]
