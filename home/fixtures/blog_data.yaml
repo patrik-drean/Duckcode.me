@@ -436,8 +436,8 @@ def past_time(old_date):\n
        &nbsp;&nbsp;&nbsp;time_elapsed = days\n
        &nbsp;&nbsp;&nbsp;time_measure = 'day'\n
    &nbsp;elif hours > 0:\n
-       &nbsp; &nbsp;&nbsp;time_elapsed = hours\n
-       &nbsp; &nbsp;&nbsp;time_measure = 'hour'\n
+       &nbsp;&nbsp;&nbsp;time_elapsed = hours\n
+       &nbsp;&nbsp;&nbsp;time_measure = 'hour'\n
    &nbsp;elif minutes > 0:\n
        &nbsp;&nbsp;&nbsp;time_elapsed = minutes\n
        &nbsp;&nbsp;&nbsp;time_measure = 'minute'\n
