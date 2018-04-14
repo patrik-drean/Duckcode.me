@@ -25,39 +25,6 @@
   "model": "home.category",
   "pk": 3,
   "fields": {
-    "name": "Javascript",
-    "url": "javascript",
-    "filename": null,
-    "create_date": "2018-03-23T20:32:32.404",
-    "last_modified_date": "2018-03-23T20:32:56.366"
-  }
-},
-{
-  "model": "home.category",
-  "pk": 4,
-  "fields": {
-    "name": "Interviewing",
-    "url": "interviewing",
-    "filename": null,
-    "create_date": "2018-03-23T20:32:32.404",
-    "last_modified_date": "2018-03-23T20:32:56.366"
-  }
-},
-{
-  "model": "home.category",
-  "pk": 5,
-  "fields": {
-    "name": "Personal",
-    "url": "personal",
-    "filename": null,
-    "create_date": "2018-03-23T20:32:32.404",
-    "last_modified_date": "2018-03-23T20:32:56.366"
-  }
-},
-{
-  "model": "home.category",
-  "pk": 6,
-  "fields": {
     "name": "Soft Skills",
     "url": "soft_skils",
     "filename": null,
@@ -65,76 +32,109 @@
     "last_modified_date": "2018-03-23T20:32:56.366"
   }
 },
+# {
+#   "model": "home.category",
+#   "pk": 3,
+#   "fields": {
+#     "name": "Javascript",
+#     "url": "javascript",
+#     "filename": null,
+#     "create_date": "2018-03-23T20:32:32.404",
+#     "last_modified_date": "2018-03-23T20:32:56.366"
+#   }
+# },
+# {
+#   "model": "home.category",
+#   "pk": 4,
+#   "fields": {
+#     "name": "Interviewing",
+#     "url": "interviewing",
+#     "filename": null,
+#     "create_date": "2018-03-23T20:32:32.404",
+#     "last_modified_date": "2018-03-23T20:32:56.366"
+#   }
+# },
+# {
+#   "model": "home.category",
+#   "pk": 5,
+#   "fields": {
+#     "name": "Personal",
+#     "url": "personal",
+#     "filename": null,
+#     "create_date": "2018-03-23T20:32:32.404",
+#     "last_modified_date": "2018-03-23T20:32:56.366"
+#   }
+# },
+# {
+#   "model": "home.blog",
+#   "pk": 1,
+#   "fields": {
+#     "title": "AWS: Somewhere in the Cloud",
+#     "url": "aws_somewhere_in_the_cloud",
+#     "description": "So it turns out that the cloud is somewhere on the ground. Who would've thought of that?",
+#     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit.",
+#     "create_date": "2018-03-22T17:31:29.037",
+#     "last_modified_date": "2018-03-22T17:31:29.037",
+#     "filename": "server.jpg",
+#     "alt_text": "deploying to a server",
+#     "top_post": true,
+#     "category": 2
+#   }
+# },
+# {
+#   "model": "home.blog",
+#   "pk": 2,
+#   "fields": {
+#     "title": "Reaching Your Way to the Top",
+#     "url": "reaching_your_way_to_the_top",
+#     "description": "Sometimes after climbing the stairs for so long, you forget where you're heading",
+#     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit.",
+#     "create_date": "2018-03-23T05:32:55.758",
+#     "last_modified_date": "2018-03-23T05:32:55.758",
+#     "filename": "skyscraper.jpg",
+#     "alt_text": "high skyscraper",
+#     "top_post": true,
+#     "category": 6
+#   }
+# },
+# {
+#   "model": "home.blog",
+#   "pk": 3,
+#   "fields": {
+#     "title": "How to Con + cat + enate",
+#     "url": "how_to_concatenate",
+#     "description": "This is something basic we all learn at fast, but is it really that easy?",
+#     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit.",
+#     "create_date": "2018-03-23T06:32:55.758",
+#     "last_modified_date": "2018-03-23T06:32:55.758",
+#     "filename": "tiger_how_to_concatenate.jpg",
+#     "alt_text": "Tiger - how to concatenate",
+#     "top_post": true,
+#     "category": 1
+#   }
+# },
+# {
+#   "model": "home.blog",
+#   "pk": 5,
+#   "fields": {
+#     "title": "How to Make a 5-Star Review with JavaScript",
+#     "url": "five_star_review_javascript",
+#     "description": "I couldn't find a good star review so I decided to just make one.",
+#     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla #facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit. <br /> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim # #facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. <br /> <br /> <div class = 'code'> &nbsp; if x > 3: <br>   &nbsp;&nbsp; print('this is great')</div>  <br /> <br /> <p> Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit. </p> ",
+#     "create_date": "2018-03-24T07:40:23.404",
+#     "last_modified_date": "2018-03-24T13:43:23.404",
+#     "filename": "star_review.jpg",
+#     "alt_text": "5 star review in java script",
+#     "top_post": false,
+#     "category": 3
+#   }
+# },
 {
   "model": "home.blog",
   "pk": 1,
   "fields": {
-    "title": "AWS: Somewhere in the Cloud",
-    "url": "aws_somewhere_in_the_cloud",
-    "description": "So it turns out that the cloud is somewhere on the ground. Who would've thought of that?",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit.",
-    "create_date": "2018-03-22T17:31:29.037",
-    "last_modified_date": "2018-03-22T17:31:29.037",
-    "filename": "server.jpg",
-    "alt_text": "deploying to a server",
-    "top_post": true,
-    "category": 2
-  }
-},
-{
-  "model": "home.blog",
-  "pk": 2,
-  "fields": {
-    "title": "Reaching Your Way to the Top",
-    "url": "reaching_your_way_to_the_top",
-    "description": "Sometimes after climbing the stairs for so long, you forget where you're heading",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit.",
-    "create_date": "2018-03-23T05:32:55.758",
-    "last_modified_date": "2018-03-23T05:32:55.758",
-    "filename": "skyscraper.jpg",
-    "alt_text": "high skyscraper",
-    "top_post": true,
-    "category": 6
-  }
-},
-{
-  "model": "home.blog",
-  "pk": 3,
-  "fields": {
-    "title": "How to Con + cat + enate",
-    "url": "how_to_concatenate",
-    "description": "This is something basic we all learn at fast, but is it really that easy?",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit.",
-    "create_date": "2018-03-23T06:32:55.758",
-    "last_modified_date": "2018-03-23T06:32:55.758",
-    "filename": "tiger_how_to_concatenate.jpg",
-    "alt_text": "Tiger - how to concatenate",
-    "top_post": true,
-    "category": 1
-  }
-},
-{
-  "model": "home.blog",
-  "pk": 5,
-  "fields": {
-    "title": "How to Make a 5-Star Review with JavaScript",
-    "url": "five_star_review_javascript",
-    "description": "I couldn't find a good star review so I decided to just make one.",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla #facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit. <br /> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim # #facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. <br /> <br /> <div class = 'code'> &nbsp; if x > 3: <br>   &nbsp;&nbsp; print('this is great')</div>  <br /> <br /> <p> Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit. </p> ",
-    "create_date": "2018-03-24T07:40:23.404",
-    "last_modified_date": "2018-03-24T13:43:23.404",
-    "filename": "star_review.jpg",
-    "alt_text": "5 star review in java script",
-    "top_post": false,
-    "category": 3
-  }
-},
-{
-  "model": "home.blog",
-  "pk": 6,
-  "fields": {
     "title": "Deploy to Heroku with Dependencies in Django",
-    "url": "how_to_deploy_to_heroku",
+    "url": "how-to-deploy-to-heroku",
     "description": "It's easy to deploy to a site like Heroku when you follow the standard procedure. What happens when you're using a custom framework?",
     "content": "
                     <p>Programming already has its fair share of bugs and headaches. When it comes to
@@ -398,10 +398,10 @@
 },
 {
   "model": "home.blog",
-  "pk": 7,
+  "pk": 2,
   "fields": {
     "title": "Showing the elapsed time in Python",
-    "url": "python_elapsed_time",
+    "url": "python-elapsed-time",
     "description": "Years, months, weeks, days, hours, and minutes. This shows the difference between now and a date in the past.",
     "content": "
          <figure>
@@ -462,5 +462,110 @@ past_time(old_date) # Output: '2 weeks ago'\n
     "top_post": true,
     "category": 1
   }
+},
+{
+  "model": "home.blog",
+  "pk": 3,
+  "fields": {
+    "title": "5 Tips for Planning Projects ",
+    "url": "5-tips-for-planning-projects",
+    "description": "Don't learn the hard way. Plan now to save time later.",
+    "content": "
+         <p>
+           Sadly, I'm sharing this information after learning the hard way.
+           But the good news is that I did learn my lesson! Taking the time
+           to fully plan a project will save time and produce a better product
+           then brute-forcing your way through that project.
+         </p>
+         <h2>My Story</h2>
+         <p>
+           I currently study Information Systems at BYU. As part of the program, groups
+           take on a final project at the end of each semester called the Integrated
+           Exercise. Classes are cancelled for the week, and students apply recently
+           learned management and programming skills.
+         </p>
+         <p>
+           How does planning fit into this? Well, the first time my group participated
+           we had a very weak outline of what our project was. It took us quite some time
+           to finish our tasks. Without focus, team members were spinning
+           their wheels not knowing how to contribute.
+         </p>
+         <p>
+           The next time around, we had acquired some project management skills that changed
+           the game completely. With direction and understanding, we finished early, created
+           a better solution, and had fun during all of it. The following points are some useful ideas
+           you can implement to be succesful in planninng your own projects.
+         </p>
+         <p>
+           <b class='note'>Important Note: </b> I am not responsible for the following ideas in the slightest.
+           They originate from my professor Ernie and the organization of BYU.
+        </p>
+        <h2>Project Objective Statement</h2>
+        <p>
+          This is an overall summary of the project in under 30 words. Creating this statement
+          fulfills two things:
+          <ol>
+            <li>1. Helps formulate in the mind exactly what you're trying to accomplish.</li>
+            <li>2. Helps your team be on the same page of the overall objective of the project.
+            You may think you see eye-to-eye with a co-worker until you put it on paper. </li>
+          </ol>
+        </p>
+        <p>Here's an example project objective statement.</p>
+        <p><i>'Create a self-hosted website to hand off and present to the Family
+          Oriented Music Organization on April 13, 2018 for the contracted price.' </i></p>
+          <h2>Identify Major Components</h2>
+          <p>
+            Once you know the overall objective, you can break it down into major components.
+            Many times this may be the deliverables for your project. For example, this last
+            project broke down into four items: the website app, a client report, an internal
+            company report, and a presentation slide deck.
+          </p>
+          <h2>Break Components Down Into Tasks</h2>
+          <p>
+              Once major components are selected, it's time to brainstorm. Think of
+              every possible task that needs to be accomplished within each of the
+              components. Make sure every possible task is thought of and written
+              down (sticky notes are a great help here). Don't worry about ordering
+              tasks quite yet, just get them out of your brain and out on paper. I
+              recommend creating a formal
+              <a href='http://www.workbreakdownstructure.com' target='_blank'>Work
+              Breakdown Structure</a> of the tasks.
+          </p>
+          <h2>Sequencing Tasks</h2>
+          <p>
+            <i>Now</i> you can order tasks. Sequence the tasks, identifying the preceding
+            and following tasks for each one.
+          </p>
+          <h2>Assign Task Owners</h2>
+          <p>
+            A task owner isn't necessarily the doer of the task. They are the ones that
+            are in charge of ensuring the task is carried out, whether they do it themselves
+            or not. Make sure the task owner knows they're in charge of the task.
+          </p>
+          <h2>And You're Off!</h2>
+          <p>
+            These simple ideas will get you far. Even in small projects following
+            these steps will save you hassle in the long run.
+          </p>
+          <h2>Follow Up Questions?</h2>
+          <p>
+            Implementing these ideas will you get you far, but this is no comphrensive
+            guide to say the least. Feel free to reach out to me on
+              <a href='https://twitter.com/patrik_drean' target='_blank'>
+                Twitter
+              </a> for follow up questions.
+          </p>
+          <p>
+            Good luck planning!
+          </p>
+         ",
+    "last_modified_date": "2018-04-13T23:43:23.404", #6:06pm 4-13
+    "create_date": "2018-04-13T23:43:23.404",
+    "filename": "planning_dependency_diagram.jpg",
+    "alt_text": "planning diagram of a software project",
+    "top_post": false,
+    "category": 3
+  }
 }
+
 ]

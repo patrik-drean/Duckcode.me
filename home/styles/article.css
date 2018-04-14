@@ -43,6 +43,7 @@ pre > code {
 }
 h2 {
 	margin: 2em 0 .5em 0;
+	font-weight: 600;
 }
 .small_margin {
 	margin-top: .8em;
@@ -53,6 +54,13 @@ ul {
 
 .p_indent {
 	margin-left: 1em;
+}
+.note {
+	background-color: #358CCB;
+	color: white;
+	padding: 0 2px 0 4px;
+	margin-right: 4px;
+
 }
 /* PrismJS 1.13.0
 http://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript+aspnet+bash+csharp+git+java+json+sql+python+sass&plugins=line-numbers+toolbar+copy-to-clipboard */
