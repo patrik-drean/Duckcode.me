@@ -5,13 +5,13 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1523679135.0945868
+_modified_time = 1523714941.6349282
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/article.html'
 _template_uri = 'article.html'
 _source_encoding = 'utf-8'
 import django_mako_plus
-_exports = ['top_content', 'middle_content']
+_exports = ['title', 'top_content', 'middle_content']
 
 
 def _mako_get_namespace(context, name):
@@ -29,14 +29,21 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        article = context.get('article', UNDEFINED)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        def middle_content():
-            return render_middle_content(context._locals(__M_locals))
         def top_content():
             return render_top_content(context._locals(__M_locals))
+        def title():
+            return render_title(context._locals(__M_locals))
+        def middle_content():
+            return render_middle_content(context._locals(__M_locals))
+        article = context.get('article', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\n')
+        __M_writer('\n\n')
+        if 'parent' not in context._data or not hasattr(context._data['parent'], 'title'):
+            context['self'].title(**pageargs)
+        
+
+        __M_writer('\n\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'top_content'):
             context['self'].top_content(**pageargs)
         
@@ -52,13 +59,26 @@ def render_body(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
+def render_title(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        def title():
+            return render_title(context)
+        article = context.get('article', UNDEFINED)
+        __M_writer = context.writer()
+        __M_writer(str( article.nav_title))
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 def render_top_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        article = context.get('article', UNDEFINED)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def top_content():
             return render_top_content(context)
+        article = context.get('article', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n   <img id="main_img" src="')
         __M_writer(str( STATIC_URL ))
@@ -74,9 +94,9 @@ def render_top_content(context,**pageargs):
 def render_middle_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        article = context.get('article', UNDEFINED)
         def middle_content():
             return render_middle_content(context)
+        article = context.get('article', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n   <h1>')
         __M_writer(str( article.title ))
@@ -92,6 +112,6 @@ def render_middle_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/article.html", "uri": "article.html", "source_encoding": "utf-8", "line_map": {"28": 0, "39": 1, "44": 5, "49": 15, "55": 2, "63": 2, "64": 3, "65": 3, "66": 3, "67": 3, "68": 3, "74": 6, "81": 6, "82": 7, "83": 7, "84": 9, "85": 9, "86": 11, "87": 11, "93": 87}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/article.html", "uri": "article.html", "source_encoding": "utf-8", "line_map": {"28": 0, "41": 1, "46": 3, "51": 8, "56": 18, "62": 3, "69": 3, "75": 5, "83": 5, "84": 6, "85": 6, "86": 6, "87": 6, "88": 6, "94": 9, "101": 9, "102": 10, "103": 10, "104": 12, "105": 12, "106": 14, "107": 14, "113": 107}}
 __M_END_METADATA
 """

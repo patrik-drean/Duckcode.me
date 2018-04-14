@@ -5,13 +5,13 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1522759698.543017
+_modified_time = 1523714465.529769
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm'
 _template_uri = 'base.htm'
 _source_encoding = 'utf-8'
 import django_mako_plus
-_exports = ['top_content', 'left_content', 'middle_content', 'right_content', 'footer_content']
+_exports = ['title', 'top_content', 'left_content', 'middle_content', 'right_content', 'footer_content']
 
 
 import datetime 
@@ -22,18 +22,20 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        def top_content():
-            return render_top_content(context._locals(__M_locals))
         def footer_content():
             return render_footer_content(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def middle_content():
             return render_middle_content(context._locals(__M_locals))
+        def title():
+            return render_title(context._locals(__M_locals))
         self = context.get('self', UNDEFINED)
         def left_content():
             return render_left_content(context._locals(__M_locals))
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
+        def top_content():
+            return render_top_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\n<html>\n    <meta charset="UTF-8">\n    <head>\n      <!-- Global site tag (gtag.js) - Google Analytics -->\n      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100806632-3"></script>\n      <script>\n        window.dataLayer = window.dataLayer || [];\n        function gtag(){dataLayer.push(arguments);}\n        gtag(\'js\', new Date());\n\n        gtag(\'config\', \'UA-100806632-3\');\n      </script>\n      ')
         __M_writer('\n      ')
@@ -42,7 +44,12 @@ def render_body(context,**pageargs):
         
         __M_locals_builtin_stored = __M_locals_builtin()
         __M_locals.update(__M_dict_builtin([(__M_key, __M_locals_builtin_stored[__M_key]) for __M_key in ['catagories'] if __M_key in __M_locals_builtin_stored]))
-        __M_writer('\n        <title>Duck Code: My Journey & Learning</title>\n        <meta description="A development blog dedicated to sharing lessons learned." />\n        <meta charset="UTF-8">\n        <meta name="viewport" content="width=device-width,initial-scale=1.0">\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
+        __M_writer('\n        <title>\n          ')
+        if 'parent' not in context._data or not hasattr(context._data['parent'], 'title'):
+            context['self'].title(**pageargs)
+        
+
+        __M_writer(' - Duck Code\n        </title>\n        <meta description="A development blog dedicated to sharing lessons learned." />\n        <meta charset="UTF-8">\n        <meta name="viewport" content="width=device-width,initial-scale=1.0">\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
         __M_writer('        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>\n\n')
         __M_writer('        <script src="/django_mako_plus/dmp-common.min.js"></script>\n        ')
         __M_writer(str( django_mako_plus.links(self) ))
@@ -81,6 +88,17 @@ def render_body(context,**pageargs):
         
 
         __M_writer('\n         <p> </p>\n      </footer>\n\n      <!-- Bootstrap JS files -->\n      <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>\n      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>\n      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>\n    </body>\n</html>\n')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
+def render_title(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        def title():
+            return render_title(context)
+        __M_writer = context.writer()
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -143,6 +161,6 @@ def render_footer_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 15, "19": 16, "21": 0, "38": 2, "39": 15, "40": 16, "41": 17, "45": 17, "46": 26, "47": 29, "48": 30, "49": 30, "50": 39, "51": 39, "52": 49, "53": 50, "54": 50, "55": 50, "56": 50, "57": 50, "58": 52, "63": 66, "68": 71, "73": 74, "78": 77, "83": 82, "89": 66, "100": 71, "111": 74, "122": 77, "133": 82, "144": 133}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 15, "19": 16, "21": 0, "40": 2, "41": 15, "42": 16, "43": 17, "47": 17, "52": 19, "53": 28, "54": 31, "55": 32, "56": 32, "57": 41, "58": 41, "59": 51, "60": 52, "61": 52, "62": 52, "63": 52, "64": 52, "65": 54, "70": 68, "75": 73, "80": 76, "85": 79, "90": 84, "96": 19, "107": 68, "118": 73, "129": 76, "140": 79, "151": 84, "162": 151}}
 __M_END_METADATA
 """

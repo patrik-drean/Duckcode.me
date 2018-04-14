@@ -26,6 +26,7 @@ class Blog(models.Model):
     filename = models.TextField(blank=True, null=True)
     alt_text = models.TextField(blank=True, null=True)
     top_post = models.BooleanField()
+    nav_title = models.TextField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def image_url(self):

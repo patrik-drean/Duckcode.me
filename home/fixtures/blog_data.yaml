@@ -393,6 +393,7 @@
     "filename": "heroku_deploying_custom_framework.jpg",
     "alt_text": "laptop deploying to Heroku",
     "top_post": true,
+    "nav_title": "Deply to Heroku",
     "category": 2
   }
 },
@@ -460,6 +461,7 @@ past_time(old_date) # Output: '2 weeks ago'\n
     "filename": "time_elapsed_python.jpg",
     "alt_text": "watch showing elapsed time",
     "top_post": true,
+    "nav_title": "Python Elapsed Time",
     "category": 1
   }
 },
@@ -564,6 +566,7 @@ past_time(old_date) # Output: '2 weeks ago'\n
     "filename": "planning_dependency_diagram.jpg",
     "alt_text": "planning diagram of a software project",
     "top_post": false,
+    "nav_title": "Planning Software Projects",
     "category": 3
   }
 }
