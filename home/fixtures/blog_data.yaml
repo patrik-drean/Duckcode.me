@@ -269,7 +269,7 @@
                       </p>
                       <p>
                         It's important to note that the \"*\" indicates the most current update of
-                        that package. This can be hardcorded to a specific version (e.g., \"3.2\").
+                        that package. This can be hardcorded to a specific version (e.g., \"==3.2\").
                       </p>
 
                       <h2>How to View Your Current Packages in Your Project</h2>
@@ -375,7 +375,7 @@
                    <figure>
                  <pre>
                  <code class='language-python line-numbers' contenteditable spellcheck='false' >
-                 heroku run python manage.py makemigrations \n
+                 heroku run python manage.py makemigrations myAppName \n
                  heroku run python manage.py migrate </code>
                  </pre>
                </figure>
@@ -394,6 +394,9 @@
     "alt_text": "laptop deploying to Heroku",
     "top_post": true,
     "nav_title": "Deply to Heroku",
+    "meta_description": "Deploy to Heroku using the Python framework Django.
+      It's easy to deploy to a site like Heroku when you follow
+      the standard procedure. What happens when you're using a custom framework?",
     "category": 2
   }
 },
@@ -462,6 +465,8 @@ past_time(old_date) # Output: '2 weeks ago'\n
     "alt_text": "watch showing elapsed time",
     "top_post": true,
     "nav_title": "Python Elapsed Time",
+    "meta_description": "Years, months, weeks, days, hours, and minutes.
+      This shows the difference between now and a date in the past in Python.",
     "category": 1
   }
 },
@@ -567,6 +572,8 @@ past_time(old_date) # Output: '2 weeks ago'\n
     "alt_text": "planning diagram of a software project",
     "top_post": false,
     "nav_title": "Planning Software Projects",
+    "meta_description": "Plan your software projects now to save time later. Don't
+      learn the hard way.",
     "category": 3
   }
 }

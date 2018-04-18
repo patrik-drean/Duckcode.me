@@ -5,13 +5,13 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1523714465.529769
+_modified_time = 1524065883.486727
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm'
 _template_uri = 'base.htm'
 _source_encoding = 'utf-8'
 import django_mako_plus
-_exports = ['title', 'top_content', 'left_content', 'middle_content', 'right_content', 'footer_content']
+_exports = ['title', 'meta_description', 'top_content', 'left_content', 'middle_content', 'right_content', 'footer_content']
 
 
 import datetime 
@@ -22,20 +22,22 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def footer_content():
-            return render_footer_content(context._locals(__M_locals))
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def middle_content():
             return render_middle_content(context._locals(__M_locals))
-        def title():
-            return render_title(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
-        def left_content():
-            return render_left_content(context._locals(__M_locals))
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def top_content():
             return render_top_content(context._locals(__M_locals))
+        def meta_description():
+            return render_meta_description(context._locals(__M_locals))
+        def footer_content():
+            return render_footer_content(context._locals(__M_locals))
+        def left_content():
+            return render_left_content(context._locals(__M_locals))
+        def title():
+            return render_title(context._locals(__M_locals))
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
+        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\n<html>\n    <meta charset="UTF-8">\n    <head>\n      <!-- Global site tag (gtag.js) - Google Analytics -->\n      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100806632-3"></script>\n      <script>\n        window.dataLayer = window.dataLayer || [];\n        function gtag(){dataLayer.push(arguments);}\n        gtag(\'js\', new Date());\n\n        gtag(\'config\', \'UA-100806632-3\');\n      </script>\n      ')
         __M_writer('\n      ')
@@ -49,7 +51,12 @@ def render_body(context,**pageargs):
             context['self'].title(**pageargs)
         
 
-        __M_writer(' - Duck Code\n        </title>\n        <meta description="A development blog dedicated to sharing lessons learned." />\n        <meta charset="UTF-8">\n        <meta name="viewport" content="width=device-width,initial-scale=1.0">\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
+        __M_writer(' - Duck Code\n        </title>\n        <meta name="description" content="')
+        if 'parent' not in context._data or not hasattr(context._data['parent'], 'meta_description'):
+            context['self'].meta_description(**pageargs)
+        
+
+        __M_writer('">\n        <meta charset="UTF-8">\n        <meta name="viewport" content="width=device-width,initial-scale=1.0">\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
         __M_writer('        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>\n\n')
         __M_writer('        <script src="/django_mako_plus/dmp-common.min.js"></script>\n        ')
         __M_writer(str( django_mako_plus.links(self) ))
@@ -98,6 +105,17 @@ def render_title(context,**pageargs):
     try:
         def title():
             return render_title(context)
+        __M_writer = context.writer()
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
+def render_meta_description(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        def meta_description():
+            return render_meta_description(context)
         __M_writer = context.writer()
         return ''
     finally:
@@ -161,6 +179,6 @@ def render_footer_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 15, "19": 16, "21": 0, "40": 2, "41": 15, "42": 16, "43": 17, "47": 17, "52": 19, "53": 28, "54": 31, "55": 32, "56": 32, "57": 41, "58": 41, "59": 51, "60": 52, "61": 52, "62": 52, "63": 52, "64": 52, "65": 54, "70": 68, "75": 73, "80": 76, "85": 79, "90": 84, "96": 19, "107": 68, "118": 73, "129": 76, "140": 79, "151": 84, "162": 151}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 15, "19": 16, "21": 0, "42": 2, "43": 15, "44": 16, "45": 17, "49": 17, "54": 19, "59": 21, "60": 28, "61": 31, "62": 32, "63": 32, "64": 41, "65": 41, "66": 51, "67": 52, "68": 52, "69": 52, "70": 52, "71": 52, "72": 54, "77": 68, "82": 73, "87": 76, "92": 79, "97": 84, "103": 19, "114": 21, "125": 68, "136": 73, "147": 76, "158": 79, "169": 84, "180": 169}}
 __M_END_METADATA
 """

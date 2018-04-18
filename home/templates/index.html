@@ -1,6 +1,10 @@
 <%inherit file="base.htm" />
 <%! from home import duck_time_past as dtp%>
 <%block name="title">My Journey</%block>
+<%block name='meta_description'>
+  A development blog by Patrik Drean dedicated to sharing lessons learned. Topics
+  include Python, JavaScript, soft skills, and more.
+</%block>
 <%block name="top_content">
 
 <a href="/article/${ recent_blogs[0].url }">

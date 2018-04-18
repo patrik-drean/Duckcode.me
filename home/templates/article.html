@@ -1,6 +1,9 @@
 <%inherit file="base.htm" />
 
 <%block name="title">${ article.nav_title}</%block>
+<%block name='meta_description'>
+  ${ article.meta_description}
+</%block>
 
 <%block name="top_content">
    <img id="main_img" src="${ STATIC_URL }${article.image_url()}" alt="${ article.alt_text}" />
