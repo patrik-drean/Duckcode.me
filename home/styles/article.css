@@ -62,6 +62,14 @@ ul {
 	margin-right: 4px;
 
 }
+#reference_header {
+	color: #71767C;
+	text-shadow: 1px .5px #71767C;
+	text-align: center;
+	margin: 50px auto 10px auto;
+	width: 300px !important;
+
+}
 /* PrismJS 1.13.0
 http://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript+aspnet+bash+csharp+git+java+json+sql+python+sass&plugins=line-numbers+toolbar+copy-to-clipboard */
 /**
