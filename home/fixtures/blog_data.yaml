@@ -32,17 +32,17 @@
     "last_modified_date": "2018-03-23T20:32:56.366"
   }
 },
-# {
-#   "model": "home.category",
-#   "pk": 3,
-#   "fields": {
-#     "name": "Javascript",
-#     "url": "javascript",
-#     "filename": null,
-#     "create_date": "2018-03-23T20:32:32.404",
-#     "last_modified_date": "2018-03-23T20:32:56.366"
-#   }
-# },
+{
+  "model": "home.category",
+  "pk": 4,
+  "fields": {
+    "name": "JavaScript",
+    "url": "javascript",
+    "filename": null,
+    "create_date": "2018-04-20T20:32:32.404",
+    "last_modified_date": "2018-04-20T20:32:56.366"
+  }
+},
 # {
 #   "model": "home.category",
 #   "pk": 4,
@@ -111,22 +111,6 @@
 #     "alt_text": "Tiger - how to concatenate",
 #     "top_post": true,
 #     "category": 1
-#   }
-# },
-# {
-#   "model": "home.blog",
-#   "pk": 5,
-#   "fields": {
-#     "title": "How to Make a 5-Star Review with JavaScript",
-#     "url": "five_star_review_javascript",
-#     "description": "I couldn't find a good star review so I decided to just make one.",
-#     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla #facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit. <br /> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim # #facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. <br /> <br /> <div class = 'code'> &nbsp; if x > 3: <br>   &nbsp;&nbsp; print('this is great')</div>  <br /> <br /> <p> Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit. </p> ",
-#     "create_date": "2018-03-24T07:40:23.404",
-#     "last_modified_date": "2018-03-24T13:43:23.404",
-#     "filename": "star_review.jpg",
-#     "alt_text": "5 star review in java script",
-#     "top_post": false,
-#     "category": 3
 #   }
 # },
 {
@@ -579,6 +563,225 @@ past_time(old_date) # Output: '2 weeks ago'\n
     "meta_description": "Plan your software projects now to save time later. Don't
       learn the hard way.",
     "category": 3
+  }
+},
+{
+  "model": "home.blog",
+  "pk": 4,
+  "fields": {
+    "title": "How to Make a Five-Star Review with JavaScript",
+    "url": "five-star-review-javascript",
+    "description": "A much prettier way to get a rating from a user using JavaScript.",
+    "content": "
+         <h2>Quick Start</h2>
+         <p>Check out this
+           <a href='https://codepen.io/pdrean4/pen/KRprzN' target='_blank'>
+             CodePen
+           </a>
+           to see the five star review in action. The comments there may be all you need.</p>
+
+         <h2>HTML</h2>
+         <figure>
+          <pre>
+          <code class='language-html line-numbers' contenteditable spellcheck='false'>
+          <xmp><!-- Import svg library from FontAwesome  -->\n
+          <script defer src='https://use.fontawesome.com/releases/v5.0.7/js/all.js'></script>\n\n
+          <div class='row' id='star_div'></xmp>\n
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xmp><div class='star_wrap 1'><i class='far fa-star fa-2x stars'></i></div></xmp>\n
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xmp><div class='star_wrap 2'><i class='far fa-star fa-2x stars'></i></div></xmp>\n
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xmp><div class='star_wrap 3'><i class='far fa-star fa-2x stars'></i></div></xmp>\n
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xmp><div class='star_wrap 4'><i class='far fa-star fa-2x stars'></i></div></xmp>\n
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xmp><div class='star_wrap 5'><i class='far fa-star fa-2x stars'></i></div>\n
+          </div>\n
+
+  <input id='id_rating' type='hidden'/>
+    </xmp>
+
+          </code>
+          </pre>
+          </figure>
+
+          <p>Be sure to import
+            <a href='https://fontawesome.com/how-to-use/svg-with-js' target='_blank'>
+              FontAwesome</a>.
+            This allows us to use the star svg icon.
+          </p>
+          <p>
+            The class 'star_wrap' is used for when the mouse hovers over that area.
+          </p>
+          <p>
+            The number class (e.g., '1', '2') is used so the JavaScript
+            knows which star to stop on depending on the star the user hovers over/clicks.
+          </p>
+          <p>
+            The hidden field's value will change depending on the star selected. The
+              <a href='https://codepen.io/pdrean4/pen/KRprzN' target='_blank'>
+                CodePen
+              </a> demonstrates that.
+            </thead>
+          </p>
+
+        <h2>CSS</h2>
+
+          <figure>
+           <pre>
+           <code class='language-css line-numbers' contenteditable spellcheck='false' >
+            #star_div {\n
+               &nbsp;&nbsp;&nbsp;margin: 0 auto;\n
+               &nbsp;&nbsp;&nbsp;width: 300px;\n
+            }\n
+            .star_wrap {\n
+               &nbsp;&nbsp;&nbsp;padding: 0 10px;\n
+               &nbsp;&nbsp;&nbsp;float: left;\n
+            }\n
+            svg {\n
+               &nbsp;&nbsp;&nbsp;background-color: inherit;\n
+               &nbsp;&nbsp;&nbsp;color: #FDE338; // The star color can be changed here\n
+            }
+
+
+           </code>
+           </pre>
+           </figure>
+
+         <h2 class='small_margin'>JavaScript</h2>
+
+           <figure>
+           <pre>
+           <code class='language-javascript line-numbers' contenteditable spellcheck='false' >
+             // Grab the star wraps and put into a list\n
+             var stars_wrap = $('.star_wrap');\n
+\n
+             // Highlight the color when hovered\n
+             stars_wrap.hover(\n
+               &nbsp;&nbsp;&nbsp;function() {\n
+\n
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Grab the number class in the star wrap the user is on (e.g., '1', '5')\n
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var starNumber = ($(this).attr('class').split(/\\s+/))[1];\n
+\n
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Add color when mouse enters. See below for function.\n
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hoverStars(starNumber)\n
+               &nbsp;&nbsp;&nbsp;}, function() {\n
+\n
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Take away color when mouse leaves. See below for function.\n
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unHoverStars();\n
+               &nbsp;&nbsp;&nbsp;}\n
+             );\n
+\n
+             // Fill the color when clicked\n
+             stars_wrap.click(\n
+              &nbsp;&nbsp;&nbsp;function() {\n
+\n
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Grab the number class in the star wrap the user is on (e.g., '1', '5')\n
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var starNumber = ($(this).attr('class').split(/\\s+/))[1];\n
+\n
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Keep color added when user clicks. Changes the value of the input \n
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// with the id of 'rating'. See below for function.\n
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clickStars(starNumber);\n
+\n
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Takes away events so that user can't hover stars anymore\n
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stars_wrap.off('mouseenter mouseleave');\n
+             &nbsp;&nbsp;&nbsp;});\n
+\n
+             // The color fill for the svg tags \n
+\n
+             var colorFilled = 'M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7
+              54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2
+              12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2
+              316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z'
+\n
+             var colorOutlined = 'M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4
+             0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3
+             23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5
+             105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3
+             65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z'
+\n
+             // Functions to hover, unhover, and click\n
+\n
+             function hoverStars(starNumber) {\n
+\n
+               &nbsp;&nbsp;&nbsp;// Grab each star and put into list\n
+               &nbsp;&nbsp;&nbsp;var stars = $('path')\n
+               &nbsp;&nbsp;&nbsp;stars.each(function( index, element ) {\n
+\n
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Change the 'd' attribute to fill the color\n
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stars_wrap = $(this).parent().parent()\n
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$( element ).attr('d', colorFilled);\n
+\n
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Break the loop once on the hovered star\n
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ( stars_wrap.hasClass(starNumber)) {\n
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;\n
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n
+               &nbsp;&nbsp;&nbsp;});\n
+             }\n
+\n
+             function unHoverStars() {\n
+\n
+               &nbsp;&nbsp;&nbsp;// Grab each star and put into list\n
+               &nbsp;&nbsp;&nbsp;var stars = $('path')\n
+\n
+               &nbsp;&nbsp;&nbsp;// Change the 'd' attribute to be outlined again\n
+               &nbsp;&nbsp;&nbsp;stars.attr('d', colorOutlined);\n
+             }\n
+\n
+             function clickStars(starNumber) {\n
+\n
+               &nbsp;&nbsp;&nbsp;// Grab each star and put into list\n
+               &nbsp;&nbsp;&nbsp;var stars = $('path')\n
+               &nbsp;&nbsp;&nbsp;var booleanStar = true\n
+\n
+                &nbsp;&nbsp;&nbsp;// Go through each star to give its color until it hits the indicated star\n
+                &nbsp;&nbsp;&nbsp;stars.each(function( index, element ) {\n
+\n
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (booleanStar)\n
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\n
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$( element ).attr('d', colorFilled);\n
+\n
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stars_wrap = $(this).parent().parent();\n
+\n
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Determine if this is the star the user is clicking. Change input field\n
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ( stars_wrap.hasClass(starNumber))\n
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\n
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rating = $('#rating')\n
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rating.val(starNumber);\n
+\n
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;booleanStar = false;\n
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n
+\n
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Fill in the rest of the stars with outlines once the class was found\n
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else\n
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\n
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$( element ).attr('d', colorOutlined);\n
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n
+             &nbsp;&nbsp;&nbsp;});\n
+             }
+           </code>
+           </pre>
+           </figure>
+           <p>
+             Make sure you have linked
+             <a href='https://www.w3schools.com/jquery/jquery_get_started.asp' target='_blank'>
+               jQuery
+             </a>
+             in your project.
+           </p>
+           <p>
+             <a href='https://twitter.com/patrik_drean' target='_blank'>
+               Reach out
+             </a>
+             if you have questions.
+           </p>
+    ",
+    "create_date": "2018-04-20T21:40:23.404", #4:24pm 4-20
+    "last_modified_date": "2018-04-20T21:43:23.404",
+    "filename": "star_review.jpg",
+    "alt_text": "five star review in java script",
+    "top_post": true,
+    "nav_title": "5-Star Review JavaScript",
+    "meta_description": "A much prettier way to get a rating from a user using JavaScript.
+    This post shows you how to create a five star review using JavaScript, HTML, and CSS.",
+    "category": 4
   }
 }
 
