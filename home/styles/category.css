@@ -11,7 +11,7 @@
    width: 20vw;
    display: inline-block;
    vertical-align: top;
-   min-height: 450px;
+   min-height: 250px;
 
 }
 .category_img {
@@ -23,9 +23,13 @@
    padding: 10px;
 
 }
+h3 {
+  font-size: 1.2em;
+}
 .category_datestamp {
-   margin: 0 0 5px 10px;
+   margin: 0 0 0 10px;
    color: #707070;
+   font-size: .8em;
 }
 .category_description {
    font-size: 20px;
@@ -40,7 +44,7 @@
    text-shadow: .5px .5px .5px  #000000;
 }
 .shadow_text {
-   text-shadow: 2px 2px  #000000;
+   /* text-shadow: 2px 2px  #000000; */
 }
 a:hover {
    font-style: none;
