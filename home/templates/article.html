@@ -1,29 +1,224 @@
-<%inherit file="base.htm" />
+<%inherit file='base.htm' />
 
-<%block name="title">${ article.nav_title}</%block>
+<%block name='title'>${ article.nav_title}</%block>
 <%block name='meta_description'>
   ${ article.meta_description}
 </%block>
 
-<%block name="top_content">
-   <img id="main_img" src="${ STATIC_URL }${article.image_url()}" alt="${ article.alt_text}" />
+<%block name='top_content'>
+   <img id='main_img' src='${ STATIC_URL }${article.image_url()}' alt='${ article.alt_text}' />
 
 </%block>
-<%block name="middle_content">
+<%block name='middle_content'>
    <h1>${ article.title }</h1>
-   <p id="article_author">by Patrik Drean</p>
-   <p id="article_datestamp">${ article.create_date.strftime('%B %d, %Y') }</p>
+   <p id='article_author'>by Patrik Drean</p>
+   <p id='article_datestamp'>${ article.create_date.strftime('%B %d, %Y') }</p>
 
-   <div id="article_content">
-     ${ article.content }
-   </div>
+   <div id='article_content'>
+     <h2>Quick Start</h2>
+     <p>Check out this
+       <a href='https://codepen.io/pdrean4/pen/KRprzN' target='_blank'>
+         CodePen
+       </a>
+       to see the five star review in action. The comments there may be all you need.</p>
+
+     <h2>HTML</h2>
+     <figure>
+      <pre>
+      <code class='language-html line-numbers' contenteditable spellcheck='false' >
+<xmp>
+<!-- Import svg library from FontAwesome  -->
+<script defer src='https://use.fontawesome.com/releases/v5.0.7/js/all.js'></script>
+
+<div class='row' id='star_div'>
+         <div class='star_wrap 1'><i class='far fa-star fa-2x stars'></i></div>
+         <div class='star_wrap 2'><i class='far fa-star fa-2x stars'></i></div>
+         <div class='star_wrap 3'><i class='far fa-star fa-2x stars'></i></div>
+         <div class='star_wrap 4'><i class='far fa-star fa-2x stars'></i></div>
+         <div class='star_wrap 5'><i class='far fa-star fa-2x stars'></i></div>
+</div>
+
+<input id='id_rating' type='hidden'/>
+</xmp>
+
+      </code>
+      </pre>
+      </figure>
+
+      <p>Be sure to import
+        <a href='https://fontawesome.com/how-to-use/svg-with-js' target='_blank'>
+          FontAwesome</a>.
+        This allows us to use the star svg icon.
+      </p>
+      <p>
+        The class 'star_wrap' is used for when the mouse hovers over that area.
+      </p>
+      <p>
+        The number class (e.g., '1', '2') is used so the JavaScript
+        knows which star to stop on depending on the star the user hovers over/clicks.
+      </p>
+      <p>
+        The hidden field's value will change depending on the star selected. The
+          <a href='https://codepen.io/pdrean4/pen/KRprzN' target='_blank'>
+            CodePen
+          </a> demonstrates that.
+        </thead>
+      </p>
+
+    <h2>CSS</h2>
+
+      <figure>
+       <pre>
+       <code class='language-css line-numbers' contenteditable spellcheck='false' >
+        #star_div {
+           margin: 0 auto;
+           width: 300px;
+        }
+        .star_wrap {
+           padding: 0 10px;
+           float: left;
+        }
+        svg {
+           background-color: inherit;
+           color: #FDE338; // The star color can be changed here
+        }
 
 
+       </code>
+       </pre>
+       </figure>
 
+     <h2 class='small_margin'>JavaScript</h2>
 
+       <figure>
+       <pre>
+       <code class='language-javascript line-numbers' contenteditable spellcheck='false' >
+         // Grab the star wraps and put into a list
+         var stars_wrap = $('.star_wrap');
+
+         // Highlight the color when hovered
+         stars_wrap.hover(
+           function() {
+
+             // Grab the number class in the star wrap the user is on (e.g., "1", "5")
+             var starNumber = ($(this).attr('class').split(/\s+/))[1];
+
+             // Add color when mouse enters. See below for function.
+             hoverStars(starNumber)
+           }, function() {
+
+             // Take away color when mouse leaves. See below for function.
+             unHoverStars();
+           }
+         );
+
+         // Fill the color when clicked
+         stars_wrap.click(function() {
+
+           // Grab the number class in the star wrap the user is on (e.g., "1", "5")
+           var starNumber = ($(this).attr('class').split(/\s+/))[1];
+
+           // Keep color added when user clicks. Changes the value of the input with the id of 'rating'. See below for function.
+           clickStars(starNumber);
+
+           // Takes away events so that user can't hover stars anymore
+           stars_wrap.off('mouseenter mouseleave');
+         });
+
+         // The color fill for the svg tags
+
+         var colorFilled = 'M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7
+          54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2
+          12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2
+          316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z'
+
+         var colorOutlined = 'M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4
+         0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3
+         23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5
+         105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3
+         65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z'
+
+         // Functions to hover, unhover, and click
+
+         function hoverStars(starNumber) {
+
+           // Grab each star and put into list
+            var stars = $('path')
+            stars.each(function( index, element ) {
+
+            // Change the 'd' attribute to fill the color
+            stars_wrap = $(this).parent().parent()
+             $( element ).attr('d', colorFilled);
+
+             // Break the loop once on the hovered star
+             if ( stars_wrap.hasClass(starNumber)) {
+               return false;
+             }
+           });
+
+         }
+         function unHoverStars() {
+
+           // Grab each star and put into list
+            var stars = $('path')
+
+           // Change the 'd' attribute to be outlined again
+            stars.attr('d', colorOutlined);
+         }
+
+         function clickStars(starNumber) {
+
+           // Grab each star and put into list
+            var stars = $('path')
+            var booleanStar = true
+
+            // Go through each star to give its color until it hits the indicated star
+            stars.each(function( index, element ) {
+
+            if (booleanStar)
+            {
+                $( element ).attr('d', colorFilled);
+
+                stars_wrap = $(this).parent().parent();
+
+                // Determine if this is the star the user is clicking. Change input field
+                if ( stars_wrap.hasClass(starNumber))
+                {
+                   rating = $('#rating')
+                  console.log(rating)
+                   rating.val(starNumber);
+
+                   booleanStar = false;
+                }
+            }
+
+            // Fill in the rest of the stars with outlines once the class was found
+            else
+            {
+                $( element ).attr('d', colorOutlined);
+            }
+         });
+         }
+       </code>
+       </pre>
+       </figure>
+       <p>
+         Make sure you have linked
+         <a href='https://www.w3schools.com/jquery/jquery_get_started.asp' target='_blank'>
+           jQuery
+         </a>
+         in your project.
+       </p>
+       <p>
+         <a href='https://twitter.com/patrik_drean' target='_blank'>
+           Reach out
+         </a>
+         if you have questions.
+       </p>
+
+</div>
 </%block>
 <!--
-*introduction
-*set-up
+* import image
 *
 -->
