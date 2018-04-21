@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1524257409.8129148
+_modified_time = 1524275734.1283572
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm'
 _template_uri = 'base.htm'
@@ -22,27 +22,27 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def middle_content():
-            return render_middle_content(context._locals(__M_locals))
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def title():
             return render_title(context._locals(__M_locals))
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
-        def meta_description():
-            return render_meta_description(context._locals(__M_locals))
         self = context.get('self', UNDEFINED)
-        def left_content():
-            return render_left_content(context._locals(__M_locals))
         def top_content():
             return render_top_content(context._locals(__M_locals))
+        def left_content():
+            return render_left_content(context._locals(__M_locals))
+        def meta_description():
+            return render_meta_description(context._locals(__M_locals))
+        def middle_content():
+            return render_middle_content(context._locals(__M_locals))
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
         def footer_content():
             return render_footer_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\n<html>\n    <meta charset="UTF-8">\n    <head>\n      <!-- Global site tag (gtag.js) - Google Analytics -->\n      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100806632-3"></script>\n      <script>\n        window.dataLayer = window.dataLayer || [];\n        function gtag(){dataLayer.push(arguments);}\n        gtag(\'js\', new Date());\n\n        gtag(\'config\', \'UA-100806632-3\');\n      </script>\n      ')
         __M_writer('\n      ')
         __M_writer('\n      ')
-        catagories = hmod.Category.objects.all() 
+        catagories = hmod.Category.objects.all().order_by('name') 
         
         __M_locals_builtin_stored = __M_locals_builtin()
         __M_locals.update(__M_dict_builtin([(__M_key, __M_locals_builtin_stored[__M_key]) for __M_key in ['catagories'] if __M_key in __M_locals_builtin_stored]))

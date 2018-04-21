@@ -14,7 +14,7 @@
       </script>
       <%! import datetime %>
       <%! from home import models as hmod %>
-      <% catagories = hmod.Category.objects.all() %>
+      <% catagories = hmod.Category.objects.all().order_by('name') %>
         <title>
           <%block name="title"></%block> - Duck Code
         </title>
