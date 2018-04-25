@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1524275734.1283572
+_modified_time = 1524667128.5176551
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/base.htm'
 _template_uri = 'base.htm'
@@ -22,22 +22,22 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        def middle_content():
+            return render_middle_content(context._locals(__M_locals))
+        self = context.get('self', UNDEFINED)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def title():
             return render_title(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
-        def top_content():
-            return render_top_content(context._locals(__M_locals))
         def left_content():
             return render_left_content(context._locals(__M_locals))
-        def meta_description():
-            return render_meta_description(context._locals(__M_locals))
-        def middle_content():
-            return render_middle_content(context._locals(__M_locals))
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
         def footer_content():
             return render_footer_content(context._locals(__M_locals))
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
+        def meta_description():
+            return render_meta_description(context._locals(__M_locals))
+        def top_content():
+            return render_top_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\n<html>\n    <meta charset="UTF-8">\n    <head>\n      <!-- Global site tag (gtag.js) - Google Analytics -->\n      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100806632-3"></script>\n      <script>\n        window.dataLayer = window.dataLayer || [];\n        function gtag(){dataLayer.push(arguments);}\n        gtag(\'js\', new Date());\n\n        gtag(\'config\', \'UA-100806632-3\');\n      </script>\n      ')
         __M_writer('\n      ')
@@ -62,7 +62,7 @@ def render_body(context,**pageargs):
         __M_writer(str( django_mako_plus.links(self) ))
         __M_writer('\n\n    </head>\n    <body>\n<nav id=\'nav\' class="navbar navbar-toggleable-sm navbar-light">\n  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">\n      <span class="navbar-toggler-icon"></span>\n     </button>\n  <a class="navbar-brand" href="/">\n        <img id=\'duck_logo\' src="')
         __M_writer(str(STATIC_URL))
-        __M_writer('home/media/img/duck_logo.png" />\n     </a>\n  <div class="collapse navbar-collapse" id="navbarsExampleDefault">\n    <ul class="navbar-nav mr-auto">\n      <li class="nav-item">\n        <a class="nav-link" href="/category/recent">All Posts</a>\n      </li>\n      <li class="nav-item dropdown">\n        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Blog Categories</a>\n        <div class="dropdown-menu">\n')
+        __M_writer('home/media/img/duck_logo.svg" />\n     </a>\n  <div class="collapse navbar-collapse" id="navbarsExampleDefault">\n    <ul class="navbar-nav mr-auto">\n      <li class="nav-item">\n        <a class="nav-link" href="/category/recent">All Posts</a>\n      </li>\n      <li class="nav-item dropdown">\n        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Blog Categories</a>\n        <div class="dropdown-menu">\n')
         for c in catagories:
             __M_writer('          <a class="dropdown-item" href="/category/')
             __M_writer(str(c.url))
