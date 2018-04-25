@@ -70,7 +70,19 @@ ul {
 	width: 300px !important;
 
 }
-/* PrismJS 1.13.0
+
+@media (max-width: 768px)
+{
+
+	#top-section {
+		padding: 0 10px;
+	}
+}
+
+
+
+
+/***************************** PrismJS 1.13.0****************************
 http://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript+aspnet+bash+csharp+git+java+json+sql+python+sass&plugins=line-numbers+toolbar+copy-to-clipboard */
 /**
  * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
