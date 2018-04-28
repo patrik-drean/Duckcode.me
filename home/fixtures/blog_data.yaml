@@ -777,17 +777,251 @@ past_time(old_date) # Output: '2 weeks ago'\n
   "model": "home.blog",
   "pk": 5,
   "fields": {
-    "title": "Test Driven Development - Fundamentals",
+    "title": "Test-Driven Development - Fundamentals",
     "url": "test-driven-development-fundamentals",
     "description": "To test first or not to test first, that is the question.",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit.",
+    "content": "
+          <p>
+            Test-driven development (TDD) is a methdology that programmers use to produce
+            higher quality code. The 'standard' procedure of coding has always been code first,
+            test second. TDD swaps this mindset by focusing on testing first before the actual
+            coding happens. This article is a brief overview of the fundamentals with a small
+            example of how it works. We will be using python, and more specifically the
+            <a href='https://docs.python.org/3/library/unittest.html' target='_blank'>
+              unittest
+            </a>
+            framework provided in the standard python library.
+          </p>
+
+          <h2>The Process</h2>
+          <p>
+            <img class='mx-auto d-block' src='/static/home/media/blog_content/5_tdd_diagram.png' width='400px'/>
+          </p>
+
+          <p>
+            The diagram shows the high level steps for TDD. Using an example, we'll step through
+            each step to show how it would work. If you're unfamiliar with the unittest framework from
+            python you can check out this
+            <a href='http://pythontesting.net/framework/unittest/unittest-introduction/' target='_blank'>
+              tutorial
+            </a> for a general overview (or you should be able to pick up a lot of the functionality
+            from the comments in the code).
+          </p>
+
+          <h2>Example Overview</h2>
+          <p>
+          We want to create a script that formats a list of street addresses. Using
+          TDD, we'll code it to make sure that not only does it work, but also that it
+          functions so that the following requirements are met:
+          </p>
+
+          <ol class='numbered_list'>
+            <li>There are no decimals in the address.</li>
+          </ol>
+
+          <h2>Step 1: Write Test</h2>
+          <p>
+            This first test will check to see if our addresses were successfully loaded
+            into the list.
+          </p>
+          <figure>
+            <pre>
+            <code class='language-python line-numbers' contenteditable spellcheck='false' ># Import the unittest framework
+              \nimport unittest
+              \n# Import the code from our script file
+              \nfrom my_code_block import *
+
+              \n# Create our own test case class that inherits from the base TestCase class
+              \nclass AddressTestCase(unittest.TestCase):
+
+                \n&nbsp;&nbsp;&nbsp;# In unittest, each test function must begin with 'test_'
+                \n&nbsp;&nbsp;&nbsp;def test_address_in_list(self):
+                    \n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# This assert checks that the address is in the list by seeing if it's equal
+                    \n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.assertEqual(addresses[0], '634 Tomato Way')
+
+                \n# This is to actually run the test
+                \nif __name__ == '__main__':
+                    \n&nbsp;&nbsp;&nbsp;unittest.main()
+            </code>
+            </pre>
+          </figure>
+          <h2>Step 2: Run and Fail Test</h2>
+          <p>
+            The result is that the test failed, which is obvious as we haven't written anything yet.
+          </p>
+
+          <figure>
+            <pre>
+            <code class='language-python' contenteditable spellcheck='false' >
+    $ python my_test.py
+    \n======================================================================
+    \nERROR: test_address_in_list (__main__.AddressTestCase)
+    \n----------------------------------------------------------------------
+    \nTraceback (most recent call last):
+    \n  File 'blog.py', line 12, in test_address_in_list
+    \n    self.assertEqual(addresses[0], '634 Tomato Way')
+    \nNameError: name 'addresses' is not defined
+
+    \n----------------------------------------------------------------------
+    \nRan 1 test in 0.000s
+
+    \nFAILED (errors=1)
+            </code>
+            </pre>
+          </figure>
+          <h2>Step 3: Write Code</h2>
+          <p>
+            Now we can actually write the code to make it succeed.
+          </p>
+          <p>
+              <span class='note'>Note: </span>
+              The code is in a separate .py file we named 'my_code_block.py'.
+          </p>
+
+          <figure>
+            <pre>
+            <code class='language-python line-numbers' contenteditable spellcheck='false' >
+              addresses = ['634 Tomato Way', '233 E. 500 S.', '1800 N. Python Lane']
+            </code>
+            </pre>
+          </figure>
+          <h2>Step 4: Run and Pass Test</h2>
+          <figure>
+          <pre>
+          <code class='language-python' contenteditable spellcheck='false' >
+    $ python my_test.py
+    \n----------------------------------------------------------------------
+
+    \nRan 1 test in 0.000s
+
+    \nOK
+          </code>
+          </pre>
+        </figure>
+
+          <h2>Step 5: Refactor Code</h2>
+            <p>
+              At this point there's not much code to refactor (since there's only one line of it),
+              but after doing several tests it's good to take a second to see what pieces of code
+              you can consolidate and make more efficient.
+            </p>
+
+          <h2>Now repeat!</h2>
+            <p>
+              We'll now apply the same principles to format the addresses to not have any deciamls in
+              any them.
+            </p>
+          <h2>Step 1: Write Test</h2>
+          <figure>
+            <pre>
+            <code class='language-python line-numbers' contenteditable spellcheck='false' ># Import the unittest framework
+              \nimport unittest
+              \n# Import the code from our script file
+              \nfrom my_code_block import *
+\n
+              \n# Create our own test case class that inherits from the base TestCase class
+              \nclass AddressTestCase(unittest.TestCase):
+\n
+              \n  # In unittest, each test function must begin with 'test_'
+              \n  def test_address_in_list(self):
+              \n      # This assert checks that the address is in the list by seeing if it's equal
+              \n      self.assertEqual(addresses[0], '634 Tomato Way')
+\n
+              \n  # ***************** Added decimal test ********************
+              \n  def test_decimal(self):
+              \n      no_decimals = True
+\n
+              \n      # This loops through each address to check if it has a decimal in it
+              \n      for value in addresses:
+              \n          if '.' in value:
+              \n              no_decimals = False
+\n
+              \n      # Run an assert on whether or not there were decimals in one of the addresses.
+              \n      self.assertTrue(no_decimals)
+\n
+              \n  # This is to actually run the test
+              \n  if __name__ == '__main__':
+              \n      unittest.main()
+            </code>
+            </pre>
+          </figure>
+          <h2>Step 2: Run and Fail Test</h2>
+
+          <figure>
+            <pre>
+            <code class='language-python' contenteditable spellcheck='false' >
+    $ python my_test.py
+    \n======================================================================
+    \nFAIL: test_decimal (__main__.AddressTestCase)
+    \n----------------------------------------------------------------------
+    \nTraceback (most recent call last):
+    \n  File 'blog.py', line 23, in test_decimal
+    \n    self.assertTrue(no_decimals)
+    \nAssertionError: False is not true
+\n
+    \n----------------------------------------------------------------------
+    \nRan 2 tests in 0.001s
+\n
+    \nFAILED (failures=1)
+            </code>
+            </pre>
+          </figure>
+          <h2>Step 3: Write Code</h2>
+
+
+          <figure>
+            <pre>
+            <code class='language-python line-numbers' contenteditable spellcheck='false' >addresses = ['634 Tomato Way', '233 E. 500 S.', '1800 N. Python Lane']
+              \nformatted_addresses = []
+\n
+              \n# Loop to replace '.' with nothing and add to the formatted_addresses list
+              \nfor value in addresses:
+              \n    value = value.replace('.', '')
+              \n    formatted_addresses.append(value)
+
+            </code>
+            </pre>
+          </figure>
+          <h2>Step 4: Run and Pass Test</h2>
+          <figure>
+          <pre>
+          <code class='language-python' contenteditable spellcheck='false' >
+    $ python my_test.py
+    \n----------------------------------------------------------------------
+    \nRan 2 tests in 0.000s
+\n
+    \nOK
+          </code>
+          </pre>
+        </figure>
+
+          <h2>Step 5: Refactor Code</h2>
+          <p>Then just double check for ways to improve your code.</p>
+          <h2>Repeat!</h2>
+          <p>
+            It was hard for me to get my mind around this. It seems backward to my
+            nature to test first. But once I did a few projects using this mindset I feel my
+            code is much cleaner. TDD allows you to fix problems before they even exist.
+          <p>
+            <a href='https://twitter.com/patrik_drean' target='_blank'>
+              Reach out
+            </a>
+            if you have questions. Good luck on testing before your coding!
+          </p>
+
+          <h2 id='reference_header' >References</h2>
+          <a class='align-center' href='https://medium.freecodecamp.org/learning-to-test-with-python-997ace2d8abe'>
+            https://medium.freecodecamp.org/learning-to-test-with-python-997ace2d8abe
+          </a>
+
+    ",
     "create_date": "2018-04-28T2:40:23.404", #8:24am 4-28
     "last_modified_date": "2018-04-28T2:40:23.404",
-    "filename": "test_chalkbaord.jpg",
+    "filename": "test_chalkboard.jpg",
     "alt_text": "the word test on a chalkboard",
     "top_post": false,
-    "nav_title": "Test Driven Development",
-    "meta_description": "Test Driven Development, or TDD, is a methdology used by
+    "nav_title": "Test-Driven Development",
+    "meta_description": "Test-Driven Development, or TDD, is a methdology used by
     programmers to create higher quality code. ",
     "category": 5
   }

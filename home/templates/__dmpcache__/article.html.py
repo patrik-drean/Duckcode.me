@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1524263553.002251
+_modified_time = 1524953740.4721448
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/duck_code/duck_code/home/templates/article.html'
 _template_uri = 'article.html'
@@ -29,16 +29,16 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        def top_content():
+            return render_top_content(context._locals(__M_locals))
+        article = context.get('article', UNDEFINED)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        def meta_description():
-            return render_meta_description(context._locals(__M_locals))
         def title():
             return render_title(context._locals(__M_locals))
         def middle_content():
             return render_middle_content(context._locals(__M_locals))
-        article = context.get('article', UNDEFINED)
-        def top_content():
-            return render_top_content(context._locals(__M_locals))
+        def meta_description():
+            return render_meta_description(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\n\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'title'):
@@ -84,9 +84,9 @@ def render_title(context,**pageargs):
 def render_meta_description(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        article = context.get('article', UNDEFINED)
         def meta_description():
             return render_meta_description(context)
-        article = context.get('article', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n  ')
         __M_writer(str( article.meta_description))
@@ -99,10 +99,10 @@ def render_meta_description(context,**pageargs):
 def render_top_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def top_content():
             return render_top_content(context)
         article = context.get('article', UNDEFINED)
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         __M_writer = context.writer()
         __M_writer("\n   <img id='main_img' src='")
         __M_writer(str( STATIC_URL ))
@@ -118,15 +118,15 @@ def render_top_content(context,**pageargs):
 def render_middle_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        article = context.get('article', UNDEFINED)
         def middle_content():
             return render_middle_content(context)
-        article = context.get('article', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n   <h1>')
         __M_writer(str( article.title ))
         __M_writer("</h1>\n   <p id='article_author'>by Patrik Drean</p>\n   <p id='article_datestamp'>")
         __M_writer(str( article.create_date.strftime('%B %d, %Y') ))
-        __M_writer("</p>\n\n   <div id='article_content'>\n      ")
+        __M_writer("</p>\n\n   <div id='article_content'>\n    ")
         __M_writer(str( article.content ))
         __M_writer('\n   </div>\n')
         return ''

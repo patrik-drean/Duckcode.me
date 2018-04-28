@@ -70,6 +70,10 @@ ul {
 	width: 300px !important;
 
 }
+.numbered_list  {
+    list-style-type: decimal !important;
+
+}
 
 @media (max-width: 768px)
 {
