@@ -1025,9 +1025,136 @@ past_time(old_date) # Output: '2 weeks ago'\n
     programmers to create higher quality code. ",
     "category": 5
   }
-}
+},
+{
+  "model": "home.blog",
+  "pk": 6,
+  "fields": {
+    "title": "3 Essential Keys to Successful Projects",
+    "url": "keys-to-successful-projects",
+    "description": "Incorporating one of these principles is great, but having all three is absolute gold.",
+    "content": "
+<p>
+This framework came to me piece by piece and has really changed how I approach any of my projects.
+Once I finally put it all together, I was even more pleased to realize that it creates a catchy acronym
+(a must for any successful framework, of course). So without further ado, the three key components to a
+successful project is <b>CPR -- Content, Presentation, and Reach </b>. CPR doesn’t just apply to a software
+project, but it can heavily impact any other project including writing articles, social media marketing,
+ creating a resume, or anything else where you want to influence, motivate, and persuade others.
+ We’ll break down each component down and talk about why it’s important.
+</p>
+<h2>Content</h2>
+<p>
+  Content is the actual substance of what you’re doing. No matter how colorful or shiny you make
+  something, it has to have at its core something that will add value to the person you are trying
+  to influence. We need to ask ourselves these questions: <br /><br />
 
+<i>Is my project just white noise? Or am I creating something that actually has some substance to it? </i><br /><br />
+
+CBinsights
+<a href='https://www.cbinsights.com/research/startup-failure-reasons-top/' target='_blank'>recently did a study </a>
+  on the top reasons for why startups failed. The number one reason
+(by a long shot) was the fact <b>there wasn’t a market need for what the startup was offering. </b>
+Those startups may have had a great business model and a slick slide deck for presenting, but
+they never got off the ground because they didn’t have the right content that truly added value
+to people. <br /><br />
+
+Examples of good Content:
+  <ul>
+    <li>A blog post with compelling ideas that are more than just “fluff”</li>
+    <li>A mobile app that incorporates itself well in users’ daily activities</li>
+    <li>A sales product that is actually better than competitors</li>
+    <li>Social media posts that don’t just document your life but rather entertain viewers</li>
+    <li>Including content on your website that is purely dedicated to helping others (for example, the other day I came across a
+        <a href='https://www.namecheap.com/support/knowledgebase/article.aspx/9737/2208/pointing-a-domain-to-the-heroku-app' target='_blank'> tutorial by Namecheap </a>
+        that has little to do with their actual service)</li>
+  </ul>
+</p>
+
+<h2>Presentation</h2>
+<p>
+Once you have solid content in place, <i>now</i> you can make it shiny. You can have
+the most eloquent and profound blog post of all time, but if the font size is 6
+pixels big and each paragraph is 40 sentences long, all of its eloquence is wasted.
+An example of this idea can be seen by looking at Python’s
+<a href='https://docs.python.org/release/1.4/' target='_blank'>earlier documentation.</a>
+The docs are chalk full of good content, but it’s packaged in obscure links and bland text that
+annoyingly extends to the very edge of the screen. This is an example of how, without
+good presentation, users can't take
+advantage of the content they’re seeking, even though the content is right there.
+Python has greatly enhanced their presentation in
+<a href='https://docs.python.org/release/3.6.5/' target='_blank'>later versions</a>. <br /><br />
+
+There are many, many amazing software projects out there. How many of them are
+tucked away in some obscure GitHub profile lacking presentation? It’s not enough
+to create an exciting project; we also have to facilitate a person’s experience
+and make it easy to show <i>why</i> it is an exciting project. <br /><br />
+
+Examples of good Presentation:
+<ul>
+  <li>Formatting your blog to have appropriate font size, colors, spacing, etc.</li>
+  <li>A mobile app that has a sleek logo and a clean home screen</li>
+  <li>An easy-to-read instruction guide included with your product</li>
+  <li>Improving presentation skills for speeches</li>
+</ul>
+</p>
+
+<h2>Reach</h2>
+<p>
+Let’s imagine you buy someone the perfect present, something they’ve really wanted for a long time.
+You spend hours wrapping it, making sure all the creases are perfectly folded and,
+as a finishing touch, you top it with a beautiful red bow. What happens if after
+all your work you just throw the present in your closet and leave it there? Does
+it matter that it was the perfect gift? Does it matter it was perfectly wrapped,
+even with the beautiful red bow? The present only has value if you’re able to
+actually deliver it to the person for whom it was intended. <br /><br />
+
+The mindset of “build it and they’ll come” is the exception, not the rule.
+Reach means getting your content out there, whether that be through social media,
+Search Engine Optimization (SEO), word of mouth, or some other medium. <br /><br />
+Presentation techniques are needed here. The better the presentation, the further the reach.<br /><br />
+
+Examples of good Reach:
+<ul>
+  <li>Posting blog posts on twitter with appropriate tags</li>
+  <li>Creating a referral coupon for your product, incentivizing users to share it with their friends</li>
+  <li>Improving SEO on your website to make it easier to be found on Google</li>
+  <li>Talking to people about the projects you’re working on</li>
+  <li>Making employees in a department aware of a new feature recently developed</li>
+</ul>
+
+</p>
+
+<h2>Bringing It All Together</h2>
+<p>
+Think about any successful project out in the world. Does it have content,
+presentation, and reach? Do you think it would be as successful if it was missing one of those pieces?<br /><br />
+If you can incorporate just one of these ideas a little bit more, you’ll see a difference.
+If you master all three, you’ll be unstoppable.
+</p>
+
+<p>
+  Feel free to
+  <a href='https://twitter.com/patrik_drean' target='_blank'>
+  reach out
+  </a>
+  to discuss this further. Good luck on improving the <b>CPR</b> on your projects!
+</p>
+
+    ",
+    "create_date": "2018-05-4T17:40:23.404", #4:24pm 4-20
+    "last_modified_date": "2018-05-4T17:43:23.404",
+    "filename": "red_cross.png",
+    "alt_text": "red cross",
+    "top_post": true,
+    "nav_title": "3 Keys to Projects - CPR",
+    "meta_description": "Each successful project needs three things: Content, Presentation,
+    and Reach. Incorporating one of these principles is great, but having all three is absolute gold.",
+    "category": 3
+    }
+}
 ]
+##################### Example ###########################
 # {
 #   "model": "home.blog",
 #   "pk": 5,
@@ -1035,7 +1162,10 @@ past_time(old_date) # Output: '2 weeks ago'\n
 #     "title": "Test Driven Development - Fundamentals",
 #     "url": "test-driven-development-fundamentals",
 #     "description": "This is something basic we all learn at fast, but is it really that easy?",
-#     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed arcu non odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Tellus mauris a diam maecenas sed enim. Velit sed ullamcorper morbi tincidunt. Suspendisse potenti nullam ac tortor vitae. Velit sed ullamcorper morbi tincidunt ornare. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Sit amet commodo nulla facilisi. Ac auctor augue mauris augue neque gravida. Diam quam nulla porttitor massa id. Massa vitae tortor condimentum lacinia quis. Ipsum a arcu cursus vitae congue. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Justo donec enim diam vulputate ut pharetra sit.",
+#     "content": "
+#         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+#         vulputate ut pharetra sit.
+#         ",
 #     "create_date": "2018-04-20T21:40:23.404", #4:24pm 4-20
 #     "last_modified_date": "2018-04-20T21:43:23.404",
 #     "filename": "star_review.jpg",
