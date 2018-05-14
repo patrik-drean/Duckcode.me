@@ -1152,6 +1152,122 @@ If you master all three, you’ll be unstoppable.
     and Reach. Incorporating one of these principles is great, but having all three is absolute gold.",
     "category": 3
     }
+},
+{
+  "model": "home.blog",
+  "pk": 7,
+  "fields": {
+    "title": "Fortnite – The Mentorship Parallel ",
+    "url": "fortnite-mentorship-parallel",
+    "description": "What does the most popular game have in common with learning from others?
+    More than you may think.",
+    "content": "
+     <p>
+       Fortnite is a revolutionary open-source game that is free and available for any user to play.
+       Despite being free, this cartoon shooter game
+       <a href='https://www.forbes.com/sites/insertcoin/2018/04/18/fortnite-is-earning-1m-a-day-on-mobile-players-are-spending-more-time-with-it-than-tinder/#c37aaf3d8371' target='_blank'>
+         earns millions of dollars daily.
+       </a>
+       The overall objective of the game is to be the last man standing out of 100 other players.
+     </p>
+
+     <p>
+       I’ve recently started playing it as a way to stay in contact with my brothers who
+       don’t live nearby. As we’ve played on our dedicated weeknight, my mind has been
+       making connections between the game and the role of mentors. Yes, I know I should be
+       focued on winning and all of that, but sometimes you need to make professional connections
+       while you play, right?
+     </p>
+
+     <p>
+       (Whether or not you're familiar with Fortnite,
+       <a href='https://www.youtube.com/watch?v=TuEpUrQCOkk' target='_blank'>
+          this video
+        </a>
+          gives a short, comical summary of what it is.)
+     </p>
+
+     <h2>General Overview of Looting</h2>
+     <p>
+       Before we talk about the comparisons, let me explain some key things.
+       One objective of the game is to loot items so that you’re better equipped
+       and have a higher chance of winning. There are two general forms of looting:<br /><br />
+1.	Running around and picking up items one-by-one <br />
+2.	Eliminating other players and picking up all the items they had <br /><br />
+Beating other players is like hitting the jackpot as it allows you to reap the benefits
+of the hard work of fellow players. However, both methods are acceptable ways of getting items.
+Now, on to making the parallels!
+     </p>
+
+     <h2>Lesson 1: Looting One-by-One = Learning on Your Own</h2>
+
+     <p>
+       In Fortnite, it can be tiresome to have to run from place to place looking for items.
+       In some places you get lucky when you find a rare item, while in others you get the
+       same mundane thing over and over again.
+     </p>
+     <p>
+       This can be related to your own individual journey. It’s hard sometimes
+       learning something new and unfamiliar. It requires dedication and patience
+       to go from one thing to the next. Sometimes you have lots of success and you
+       feel you progress dramatically, while other times you feel you’re backpedaling
+       and wasting time.
+     </p>
+
+     <img class='mx-auto d-block' src='/static/home/media/blog_content/7_looting_alone.jpeg' width='600px'/>
+
+     <h2>Lesson 2:</h2>
+     <h3>Part A: Looting through Other Players = Learning from Others</h3>
+     <p>The plethora of items you get from a person is exhilarating. Rather than
+       having to scour the map for a rare item, somebody’s already done the hard work
+       and found it for you. </p>
+      <p>This can be applied to the importance of learning from others. Someone
+        else has already taken the time to figure something out. Why spend your
+        energy running all over the place to explore unknown regions when someone else
+        has drawn up the map? Of course, we shouldn’t expect others to drop everything
+        they’re working on and take us by the hand every time we start learning something new.
+         But they can at least tell us the path
+        they’ve followed so that we can retrace their steps.</p>
+    <p>  <span class='note'>Note:</span> The one difference when comparing this to Fortnite is that
+      this relationship is mutually
+      beneficial in real life. The person sharing the information can be benefitted as well.
+      There’s no need to eliminate them ;). </p>
+
+      <img class='mx-auto d-block' src='/static/home/media/blog_content/7_looting_others.jpeg' width='600px'/>
+
+      <br /><br />
+      <h3>Part B: We Can Learn Something from Anyone</h3>
+      <p>In Fortnite, sometimes the people you eliminate haven’t gathered much.
+        However, you can still benefit from what they had, such as ammo, resources, etc. </p>
+      <p>The same concept is true when dealing with others. Every person has something
+        valuable they have to offer. Don’t be deceived by appearances.</p>
+
+      <h2>Both Ways are Good and Necessary</h2>
+      <p>
+        Just as a player isn’t considered dumb for using both ways of looting,
+        we also should realize it’s good to learn through our own merits and from
+        the advice of others. Some days you’ll have to hop from place to place
+        until you strike gold and on others you’ll learn from someone else that has tread the path already.
+      </p>
+
+      <h2>The Bottom Line</h2>
+      <p>
+        Be patient as you strive to progress and always be open to a friend’s guiding hand.<br /> Then you
+        can enjoy your victory!
+      </p>
+
+      <img class='mx-auto d-block' src='/static/home/media/blog_content/7_victory.jpeg' width='600px'/>
+        ",
+    "create_date": "2018-05-14T21:40:23.404", #4:24pm 4-20
+    "last_modified_date": "2018-05-14T21:43:23.404",
+    "filename": "fortnite_mentorship.jpeg",
+    "alt_text": "fortnite game image",
+    "top_post": false,
+    "nav_title": "Fortnite & Mentorship",
+    "meta_description": "What does the most popular game have in common with learning from others?
+    Fortnite has many parallels to mentorship. ",
+    "category": 3
+  }
 }
 ]
 ##################### Example ###########################

@@ -16,6 +16,10 @@ h1 {
    text-align: center;
    margin: 0;
 }
+h3 {
+	margin: 0 0 .5em 1em;
+
+}
 #article_author {
    text-align: center;
    margin: .2em 0 2.4em 0;
