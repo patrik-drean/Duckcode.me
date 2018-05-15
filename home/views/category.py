@@ -7,10 +7,10 @@ from home import models as hmod
 @view_function
 def process_request(request, category_url = 'recent'):
     if category_url == 'recent':
-        blogs = list(hmod.Blog.objects.all())[::-1]
+        blogs = list(hmod.Blog.objects.all().order_by('id'))[::-1]
     else:
         c = hmod.Category.objects.get(url = category_url)
-        blogs = list(hmod.Blog.objects.filter(category_id = c.id))[::-1]
+        blogs = list(hmod.Blog.objects.filter(category_id = c.id).order_by('id'))[::-1]
     context = {
         'blogs': blogs,
     }
