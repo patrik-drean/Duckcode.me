@@ -1268,6 +1268,109 @@ Now, on to making the parallels!
     Fortnite has many parallels to mentorship. ",
     "category": 3
   }
+},
+{
+  "model": "home.blog",
+  "pk": 8,
+  "fields": {
+    "title": "Selenium - The Python Library",
+    "url": "selenium-python-library",
+    "description": "This library opens up endless possibilities when web scraping by allowing you to navigate a browser.",
+    "content": "
+             <p>
+               When it comes to web scraping, the library Beautiful Soup is an easy go to.
+               However, I recently found myself in a situation where it couldn't do the job
+               that I wanted. The information I was hoping to scrape used Ajax to load
+               following sets of data. Through my search, I came across the Selenium library
+               which allows you to program a script to navigate an internet browser. Below is a
+               basic script with an explanation of how key components of the library
+               function. The documenation is very good and I've included it below for more
+               details.
+             </p>
+             <h2>Prerequisites</h2>
+             <figure>
+               <pre>
+               <code class='language-python' contenteditable spellcheck='false' >pip install selenium
+               </code>
+               </pre>
+             </figure>
+             <p>Depending on the website browser you choose to use, you'll have to follow
+               <a href='http://selenium-python.readthedocs.io/installation.html' target='_blank'>
+                 certain steps
+               </a> before you can start using Selenium.
+             </p>
+             <h2>Selenium Script</h2>
+             <figure>
+               <pre>
+               <code class='language-python line-numbers' contenteditable spellcheck='false' >
+                 # Import various components to be used later
+                 \nfrom selenium import webdriver
+                 \nfrom selenium.webdriver.support.ui import WebDriverWait, Select
+                 \nfrom selenium.webdriver.common.by import By
+                 \nfrom selenium.webdriver.support import expected_conditions as EC
+                 \nfrom selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, TimeoutException
+\n
+\n
+                 \n#********************* Navigate Websites *********************#
+\n
+                 \n# Open firefox browser.
+                 \ndriver = webdriver.Firefox()
+\n
+                 \n# Navigate to desired URL
+                 \ndriver.get(\"http://www.duckcode.me/\")
+\n
+                 \n# Click a button based on the text it has
+                 \nbutton = driver.find_element_by_xpath(\"//*[contains(text(), 'All Posts')]\")
+                 \nbutton.click()
+\n
+                 \n# Wait for at least 10 seconds for the element with this class name to appear before moving on.
+                 \nclass_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'category_blog_div')))
+                 \nclass_button.click()
+\n
+                 \n# You can also find elements by id. See the docs for all the different options.
+                 \nid_button = driver.find_element_by_id(\"duck_logo\")
+                 \nid_button.click()
+\n
+                 \n#************************ Submit Forms ***********************#
+\n
+                 \n# Navigate to desired URL
+                 \ndriver.get(\"https://twitter.com\")
+\n
+                 \n# Prompt for login info
+                 \nusername = input('Enter username:')
+                 \npassword = input('Enter password:')
+\n
+                 \n# Grab inputs
+                 \nusername_input = driver.find_element_by_name(\"session[username_or_email]\")
+                 \npassword_input = driver.find_element_by_name(\"session[password]\")
+\n
+                 \n# Enter values
+                 \nusername_input.clear()
+                 \nusername_input.send_keys(username)
+\n
+                 \npassword_input.clear()
+                 \npassword_input.send_keys(password)
+\n
+                 \n# Submit form
+                 \nusername_input.submit()
+               </code>
+               </pre>
+             </figure>
+
+             <h2 id='reference_header' >References</h2>
+             <a class='align-center' href='http://selenium-python.readthedocs.io/index.html'>
+               http://selenium-python.readthedocs.io/index.html
+             </a>
+        ",
+    "create_date": "2018-05-28T21:40:23.404", #4:24pm 4-20
+    "last_modified_date": "2018-05-28T21:43:23.404",
+    "filename": "selenium_python.jpeg",
+    "alt_text": "a spider web for selenium",
+    "top_post": false,
+    "nav_title": "Selenium Python Library",
+    "meta_description": "The Selenium Python library opens up endless possibilities when web scraping by allowing you to navigate a browser.",
+    "category": 1
+  }
 }
 ]
 ##################### Example ###########################

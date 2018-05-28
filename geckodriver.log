@@ -1,0 +1,40 @@
+1527547890154	geckodriver	INFO	geckodriver 0.20.1
+1527547890299	geckodriver	INFO	Listening on 127.0.0.1:56812
+1527547891238	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-profile" "/var/folders/yd/_r5zqd3n3vlbbw9hlxgsjt5m0000gn/T/rust_mozprofile.XcLMjtBY8ISk"
+1527547892108	Marionette	INFO	Enabled via --marionette
+2018-05-28 16:51:33.424 plugin-container[5390:188094] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8047, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1527547894196	Marionette	INFO	Listening on port 56823
+1527547894268	Marionette	WARN	TLS certificate errors will be ignored for this session
+2018-05-28 16:51:34.471 plugin-container[5391:188192] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8647, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-100806632-3, line 69: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-100806632-3, line 69: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-100806632-3, line 69: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-100806632-3, line 69: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-100806632-3, line 69: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-100806632-3, line 69: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-100806632-3, line 69: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-100806632-3, line 69: unreachable code after return statement
+JavaScript error: https://abs.twimg.com/k/en/init.en.36bd9317de9af174072d.js, line 2: TypeError: sessionStorage is null
+JavaScript error: https://abs.twimg.com/k/en/init.en.36bd9317de9af174072d.js, line 2: TypeError: sessionStorage is null
+[Child 5390, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 709
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2C00AF,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2C00AF,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2C00AF,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2C00AF,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
