@@ -1371,6 +1371,89 @@ Now, on to making the parallels!
     "meta_description": "The Selenium Python library opens up endless possibilities when web scraping by allowing you to navigate a browser.",
     "category": 1
   }
+},
+{
+  "model": "home.blog",
+  "pk": 9,
+  "fields": {
+    "title": "Raise the <del>Roof</del> Exception",
+    "url": "raise-the-exception",
+    "description": "No matter how much you may trust your program or users, there will always be a need for exceptions.",
+    "content": "
+         <p>
+           When I was first starting to code, my only objective was to make my program work.
+           That task was already quite the challenge for me. I didn't have much remaining mental power
+           to ask questions like \"What if my user inputted something wrong?\", or \"What if my program times out?\"
+           I was perfectly content assuming that my end user was a perfectly behaved person who knew
+           exactly how my program worked.
+         </p>
+         <p>
+           I was very intimidated when I got to the point where I had to bring exceptions into the
+           picture. I still remember the frightening day a few years ago when my professor introduced
+           us to a \"try/catch\" phrase in C#. It seemed so abstract to me. But over time I've realized that
+           there's nothing to be scared of. Exceptions make a lot of sense if broken down properly. We will
+           took a look at the general structure of an exception in Python to make it less terrifying for everyone.
+         </p>
+         <h2>What is an Exception?</h2>
+         <p>
+           It's pretty straightforward. <span class='note'>Exception = Error</span>
+         </p>
+         <p>
+           That's it. \"Raising an exception\" just means that a specific error has occured
+           and we'll handle it in a certain way depending on the type of error it is. There
+           are many different types, such as an error when the program divides by zero or an error where the
+           index indicated in a list is out of bounds. Here is a
+           <a href='https://www.tutorialspoint.com/python/standard_exceptions.htm' target='_blank'>
+             list of common exceptions</a>.
+         </p>
+
+         <h2>Python Example</h2>
+         <figure>
+         <pre>
+         <code class='language-python line-numbers' contenteditable spellcheck='false' ># Declare a generic list
+           \nmy_list = [0, 1, 2, 3]
+\n
+           \n# The 'try' block is used on your normal code. This is where you place
+           \n# code that you think has the potential to break. The hope is that it
+           \n# doesn't break, but if it does, you'll be prepared to handle the error.
+           \ntry:
+           \n    my_value = my_list[4]
+\n
+           \n# The 'except' block is where you actually handle the error. In this case,
+           \n# we're catching an 'IndexError'. Because there's nothing in the 4th position
+           \n# in our list, this exception will be raised and the code below will print.
+           \nexcept IndexError:
+           \n    print('You did done mess up the index.')
+\n
+           \n# Multiple 'except' blocks can follow a 'try' block. In this case, the
+           \n# 'ZeroDivisionError' exception will not be raised and the code below
+           \n#  will not execute.
+           \nexcept ZeroDivisionError:
+           \n    print('This will not print in this case.')
+\n
+           \n# A 'finally' block is optional and not used too often. This code block will
+           \n# be exceucted whether or not an exception was raised.
+           \nfinally:
+           \n    print('This line will print no matter what.')
+
+         </code>
+         </pre>
+        </figure>
+        <h2 class='reference_header'>References</h2>
+        <a class='align-center' href='http://www.pythonforbeginners.com/error-handling/exception-handling-in-python'>
+          http://www.pythonforbeginners.com/error-handling/exception-handling-in-python
+        </a>
+
+        ",
+    "create_date": "2018-06-04T21:40:23.404", #4:24pm 4-20
+    "last_modified_date": "2018-06-04T21:43:23.404",
+    "filename": "raise_the_exception.jpg",
+    "alt_text": "a hand raising an error sign.",
+    "top_post": false,
+    "nav_title": "Raise the Exception",
+    "meta_description": "No matter how much you may trust your program or users, there will always be a need for exceptions in programming.",
+    "category": 1
+  }
 }
 ]
 ##################### Example ###########################
