@@ -777,7 +777,7 @@ past_time(old_date) # Output: '2 weeks ago'\n
   "model": "home.blog",
   "pk": 5,
   "fields": {
-    "title": "Test-Driven Development - Fundamentals",
+    "title": "Test-Driven Development Fundamentals",
     "url": "test-driven-development-fundamentals",
     "description": "To test first or not to test first, that is the question.",
     "content": "
@@ -1019,7 +1019,7 @@ past_time(old_date) # Output: '2 weeks ago'\n
     "last_modified_date": "2018-04-28T2:40:23.404",
     "filename": "test_chalkboard.jpg",
     "alt_text": "the word test on a chalkboard",
-    "top_post": false,
+    "top_post": true,
     "nav_title": "Test-Driven Development",
     "meta_description": "Test-Driven Development, or TDD, is a methdology used by
     programmers to create higher quality code. ",
@@ -1452,6 +1452,209 @@ Now, on to making the parallels!
     "top_post": false,
     "nav_title": "Raise the Exception",
     "meta_description": "No matter how much you may trust your program or users, there will always be a need for exceptions in programming.",
+    "category": 1
+  }
+},
+{
+  "model": "home.blog",
+  "pk": 10,
+  "fields": {
+    "title": "Building Desktop and Mobile Apps with Kivy",
+    "url": "building-apps-with-kivy",
+    "description": "Kivy is a modern Python framework that allows you to create apps for various operating systems.",
+    "content": "
+           <p>
+           One of the most beautiful things in development is when a program functions
+           across multiple platforms. The Python framework Kivy allows a developer to create apps
+           that run on Linux, Windows, OS X, Android, iOS, and Raspberry Pi. If that's not
+           a beautiful thing then I don't know what is.
+          </p>
+
+          <p>
+            Most applications in the modern world are run as website applications. However,
+            the need to program a desktop or mobile app is not obsolete quite yet. The Kivy
+            framework provides a nice, easy way to put together such an app.
+          </p>
+
+          <h2>Initial Setup</h2>
+          <p>
+            Follow the
+            <a href='https://kivy.org/docs/gettingstarted/installation.html' target='_blank'>installation instructions
+            </a>
+            to be sure you're ready to begin.
+          </p>
+
+          <h2>Kivy Overview</h2>
+          <p>
+            A Kivy project has two general parts to it. The <b>.py</b> files are where the logic and
+            general structure of the program resides. The <b>.kv</b> files are the central location
+            for designing the look of the project.
+          </p>
+          <p>
+            Below is an example project with a .py file and a .kv file.
+            </p>
+            <p> (Kivy has a good
+            <a href='https://kivy.org/docs/gettingstarted/intro.html' target='_blank'>getting started guide</a>
+            as well).
+          </p>
+
+          <h2>File Structure for the Example Project</h2>
+          <p>
+            <img class='mx-auto d-block' src='/static/home/media/blog_content/9_kivy_project_structure.png' width='400px'/>
+          </p>
+
+          <h2>example.py</h2>
+          <figure>
+            <pre>
+            <code class='language-python line-numbers' contenteditable spellcheck='false' >from kivy.app import App
+              \nfrom kivy.uix.widget import Widget
+              \nfrom kivy.uix.image import Image
+              \nfrom kivy.core.window import Window
+\n
+              \n#/////////////////////////////////////////////////////////////////#
+              \n#// In this section we manipulate the actual window of the app. //#
+              \n#// See docs for more capabilities                              //#
+              \n#/////////////////////////////////////////////////////////////////#
+\n
+              \n# Set initial window size
+              \nWindow.size = (700, 350)
+\n
+              \n# Turn off ability to exit screen
+              \nWindow.borderless = True
+\n
+              \n# Turn background clear
+              \nWindow.clearcolor = (1, 1, 1, 1)
+\n
+              \n#////////////////////////////////////#
+              \n#// Function to print out response //#
+              \n#////////////////////////////////////#
+\n
+              \ndef printout_feeling(feeling_response):
+\n
+              \n    # Printout the response once button is pushed
+              \n    print('I am feeling very {}'.format(feeling_response))
+\n
+\n
+              \n#//////////////////////////////////////////////////////////////////#
+              \n#// In this section we define the widgets that will be displayed //#
+              \n#//////////////////////////////////////////////////////////////////#
+\n
+              \n# A happy image that is designed further in the .kv file
+              \nclass SadFaceWidget(Image):
+\n
+              \n    # This function is called when this widget is pressed
+              \n    def on_touch_down(self, touch):
+              \n        if self.collide_point(*touch.pos):
+              \n            printout_feeling('sad..')
+\n
+              \n# A sad image that is designed further in the .kv file
+              \nclass HappyFaceWidget(Image):
+\n
+              \n    # This function is called when this widget is pressed
+              \n    def on_touch_down(self, touch):
+              \n        if self.collide_point(*touch.pos):
+              \n            printout_feeling('happy!!')
+\n
+\n
+              \n# Base root widget that is the parent of the two face widgets
+              \nclass RootWidget(Widget):
+              \n    pass
+\n
+              \n# This is the actual app class
+              \nclass ExampleApp(App):
+\n
+              \n    # This builds the rootwidget as the base of the app
+              \n    def build(self):
+              \n        return RootWidget()
+\n
+              \n#///////////////////#
+              \n#// Start the app //#
+              \n#///////////////////#
+\n
+              \nif __name__ == '__main__':
+              \n    ExampleApp().run()
+
+            </code>
+            </pre>
+          </figure>
+
+          <h2>example.kv</h2>
+
+          <figure>
+          <pre>
+          <code class='language-python line-numbers' contenteditable spellcheck='false' ># Indicate the version number
+            \n#:kivy 1.0.9
+\n
+            \n# Customize the SadFaceWidget that was declared in the .py file with the
+            \n# following attributes
+            \n&lt;SadFaceWidget&gt;
+            \n    size: 200, 200
+            \n    source: 'images/sad_face.png'
+\n
+            \n# Customize the HappyFaceWidget that was declared in the .py file with the
+            \n# following attributes
+            \n&lt;HappyFaceWidget&gt;
+            \n    size: 200, 200
+            \n    source: 'images/happy_face.png'
+\n
+            \n# Customize the RootWidget that was declared in the .py file
+            \n&lt;RootWidget&gt;
+\n
+            \n    # Add a label text field with the following attributes
+            \n    Label:
+            \n        font_size: 50
+            \n        center_x: root.width / 2
+            \n        top: root.top - 50
+            \n        text: 'How are you feeling today?'
+            \n        color: 0,0,0,1
+\n
+            \n    # Place the actual face widgets on the RootWidget and indicate their position
+            \n    SadFaceWidget:
+            \n        pos: ((root.width / 5) * 1) + (root.width / 28) , root.top - 500
+\n
+            \n    HappyFaceWidget:
+            \n        pos: ((root.width / 5) * 3) + (root.width / 28), root.top - 500
+\n
+          </code>
+          </pre>
+          </figure>
+
+          <h2>Run it</h2>
+          <p>
+            Run the following in the terminal in the directory of the project.
+            <figure>
+            <pre>
+            <code class='language-python ' contenteditable spellcheck='false' >
+            python example.py
+            </code>
+            </pre>
+          </figure>
+          </p>
+          <h2>Final Product</h2>
+          <p>This is what it should look like.</p>
+          <img class='mx-auto d-block' src='/static/home/media/blog_content/9_kivy_final_product.png' width='400px'/>
+          <br />
+          <p>And that's it! I highly encourage you to check out the
+            <a href='https://kivy.org/docs/' target='_blank'>
+              Kivy docs
+            </a> to continue learning to see what else you can do with Kivy.
+          </p>
+          <p>
+             Also, feel free to
+          <a href='https://twitter.com/patrik_drean' target='_blank'>reach out to me on Twitter
+          </a> for further questions.
+          </p>
+
+
+        ",
+    "create_date": "2018-06-15T21:40:23.404", #4:24pm 4-20
+    "last_modified_date": "2018-06-15T21:43:23.404",
+    "filename": "kivy_example.jpg",
+    "alt_text": "example of kivy apps",
+    "top_post": false,
+    "nav_title": "Build Apps with Kivy",
+    "meta_description": "Kivy is a modern Python framework that allows you to
+    create apps for various operating systems including windows, mac, android, etc.",
     "category": 1
   }
 }
