@@ -3,10 +3,10 @@ from kivy.uix.widget import Widget
 from kivy.uix.image import Image
 from kivy.core.window import Window
 
-###################################################################
-### In this section we manipulate the actual window of the app. ###
-### See docs for more capabilities                              ###
-###################################################################
+#/////////////////////////////////////////////////////////////////#
+#// In this section we manipulate the actual window of the app. //#
+#// See docs for more capabilities                              //#
+#/////////////////////////////////////////////////////////////////#
 
 # Set initial window size
 Window.size = (700, 350)
@@ -17,9 +17,9 @@ Window.borderless = True
 # Turn background clear
 Window.clearcolor = (1, 1, 1, 1)
 
-#################################################
-### Function to record response and close app ###
-#################################################
+#////////////////////////////////////#
+#// Function to print out response //#
+#////////////////////////////////////#
 
 def printout_feeling(feeling_response):
 
@@ -27,19 +27,19 @@ def printout_feeling(feeling_response):
     print('I am feeling very {}'.format(feeling_response))
 
 
-####################################################################
-### In this section we define the widgets that will be displayed ###
-####################################################################
+#//////////////////////////////////////////////////////////////////#
+#// In this section we define the widgets that will be displayed //#
+#//////////////////////////////////////////////////////////////////#
 
-# A happy image that it designed further in the .kv file
+# A happy image that is designed further in the .kv file
 class SadFaceWidget(Image):
 
     # This function is called when this widget is pressed
     def on_touch_down(self, touch):
         if self.collide_point(*touch.pos):
-            printout_feeling('sad...')
+            printout_feeling('sad..')
 
-# A sad image that it designed further in the .kv file
+# A sad image that is designed further in the .kv file
 class HappyFaceWidget(Image):
 
     # This function is called when this widget is pressed
@@ -59,9 +59,9 @@ class ExampleApp(App):
     def build(self):
         return RootWidget()
 
-#####################
-### Start the app ###
-#####################
+#///////////////////#
+#// Start the app //#
+#///////////////////#
 
 if __name__ == '__main__':
     ExampleApp().run()
