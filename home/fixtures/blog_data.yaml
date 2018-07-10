@@ -1657,6 +1657,117 @@ Now, on to making the parallels!
     create apps for various operating systems including windows, mac, android, etc.",
     "category": 1
   }
+},
+{
+  "model": "home.blog",
+  "pk": 11,
+  "fields": {
+    "title": "Working with csv Files in Python",
+    "url": "csv-files-python",
+    "description": "Python is one of the most powerful ways to work with spreadsheets.",
+    "content": "
+<p>
+  Python is a very powerful tool when it comes to spreadsheets. Although there exist multiple libraries that
+  aide in working with csv files, Python comes with a standard library to do basic functions. The purpose
+  of this article is to introduce some key features of this library in order to get your feet a little wet.
+  Feel free to
+<a href='https://twitter.com/patrik_drean' target='_blank'>reach out to me on Twitter
+</a> for further questions.
+</p>
+</p>
+
+<figure>
+<pre>
+<code class='language-python line-numbers' contenteditable spellcheck='false' ># The 'csv' library is part of the standard python library
+  \nimport csv
+\n
+  \n#################################################################
+  \n################### Writing to a csv file #######################
+  \n#################################################################
+\n
+  \n# The 'with' statement automatically closes the connection to the file
+  \n# once with code block has finished.
+  \n# The 'w' parameter indicates that we'll be writing a new file from scratch
+  \n# or overwriting the exisiting file
+  \nwith open('example_csv_file.csv', 'w') as csvfile:
+\n
+  \n    # Create a writer that allows us to write new informatio to the csv file
+  \n    writer = csv.writer(csvfile)
+\n
+  \n    # Write one new row to the file
+  \n    new_row = ['data 1', 'data 2', 'data 3']
+  \n    writer.writerow(new_row)
+\n
+  \n# The 'a' parameter allows you to append to a file
+  \nwith open('example_csv_file.csv', 'a') as csvfile:
+\n
+  \n    writer = csv.writer(csvfile)
+\n
+  \n    # Append a row to the file
+  \n    appended_row = ['data 4', 'data 5', 'data 6']
+  \n    writer.writerow(appended_row)
+\n
+  \n###### You can also specify headers for a csv file with a 'DictWriter' ######
+\n
+  \nwith open('header_example_file.csv', 'w') as csvfile:
+\n
+  \n    # List out the header fields
+  \n    header_fields = [
+  \n        'header 1',
+  \n        'header 2',
+  \n        'header 3',
+  \n        ]
+\n
+  \n    # User the 'DictWriter' instead of the normal 'writer'.
+  \n    # Indicate the headers as a parameter
+  \n    writer = csv.DictWriter(csvfile, fieldnames=header_fields)
+\n
+  \n    # Write the actual headers to the csv file
+  \n    writer.writeheader()
+\n
+  \n    # Write a normal row under the headers
+  \n    writer.writerow({
+  \n        'header 1': 'data 1',
+  \n        'header 2': 'data 2',
+  \n        'header 3': 'data 3',
+  \n        })
+\n
+\n
+  \n###################################################################
+  \n################### Reading from a csv file #######################
+  \n###################################################################
+\n
+  \n# No parameter is needed as the action to read is the default
+  \nwith open('example_csv_file.csv') as csvfile:
+\n
+  \n    # The 'reader' allows you to actually read the file
+  \n    reader = csv.reader(csvfile)
+\n
+  \n    # Read row by row and print the first cell in that row
+  \n    for row in reader:
+  \n        print(row[0])
+\n
+
+</code>
+</pre>
+</figure>
+
+<h2 id='reference_header' >References</h2>
+<a class='align-center' href='https://docs.python.org/3/library/csv.html'>
+  https://docs.python.org/3/library/csv.html
+</a>
+
+        ",
+    "create_date": "2018-07-14T21:40:23.404",
+    "last_modified_date": "2018-07-14T21:43:23.404",
+    "filename": "excel_collage.jpg",
+    "alt_text": "collage of microsoft excel logos",
+    "top_post": true,
+    "nav_title": "CSV Files with Python",
+    "meta_description": "Learn how to manipulate csv files with Python.
+    Python is one of the most powerful ways to work with spreadsheets.",
+    "category": 1
+  }
 }
 ]
 ##################### Example ###########################
