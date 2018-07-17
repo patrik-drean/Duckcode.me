@@ -1768,6 +1768,112 @@ Now, on to making the parallels!
     Python is one of the most powerful ways to work with spreadsheets.",
     "category": 1
   }
+},
+{
+  "model": "home.blog",
+  "pk": 12,
+  "fields": {
+    "title": "Python Scheduled Tasks",
+    "url": "python-automatic-scheduled-tasks",
+    "description": "Why do something manually when you it can happen automatically?",
+    "content": "
+     <p>
+       Automatic scripts that run on a schedule can be hugely beneficial to anyone.
+       The Python \"schedule\" library is an easy and intuitive option to make this a reality. Listed
+       below are some good examples on how to successfully set a scheduled task.
+     </p>
+
+     <h2>Initial Setup</h2>
+
+     <p>Run the following in terminal (Learn about pip
+        <a href='http://www.pythonforbeginners.com/pip/' target='_blank'>here</a>):
+    </p>
+
+        <figure>
+          <pre>
+               <code class='language-python' contenteditable spellcheck='false' >pip install schedule</code>
+               </pre>
+        </figure>
+      </p>
+
+      <h2 class='small_margin'>Examples</h2>
+
+     <figure>
+      <pre>
+      <code class='language-python line-numbers' contenteditable spellcheck='false' >import schedule
+        \nimport time
+\n
+        \n######################################################
+        \n############ Setting the scheduled tasks #############
+        \n######################################################
+\n
+        \n# Function that will be called at a certain time
+        \ndef print_something():
+        \n    print('I am something')
+\n
+        \n# Every 5 minutes run the function
+        \nschedule.every(5).minutes.do(print_something)
+\n
+        \n# Every hour run the function
+        \nschedule.every().hour.do(print_something)
+\n
+        \n# Every day at 9:30am run the function
+        \nschedule.every().day.at('9:30').do(print_something)
+\n
+        \n# Every friday at 2:15pm run the function
+        \nschedule.every().friday.at('14:15').do(print_something)
+\n
+\n
+        \n######################################################
+        \n###### Setting scheduled tasks with parameters #######
+        \n######################################################
+\n
+        \n# Function with a paremter
+        \ndef print_my_language(language):
+        \n    print('My language is {}'.format(language))
+\n
+        \n# Function that passes a paremeter
+        \nschedule.every(1).minutes.do(print_my_language, 'English')
+\n
+\n
+        \n#####################################################
+        \n### Run endless loop to check for scheduled tasks ###
+        \n#####################################################
+\n
+        \nwhile True:
+\n
+        \n    # This runs any of the tasks
+        \n    schedule.run_pending()
+\n
+        \n    # This will pause for 30 seconds before continuing
+        \n    time.sleep(30)
+\n
+      </code>
+      </pre>
+      </figure>
+      <p>
+        <a href='https://twitter.com/patrik_drean' target='_blank'>
+          Reach out
+        </a>
+        if you have questions.
+      </p>
+
+      <h2 id='reference_header' >References</h2>
+      <a class='align-center' href='http://schedule.readthedocs.io/en/stable/'>
+        http://schedule.readthedocs.io/en/stable/
+      </a>
+
+        ",
+    "create_date": "2018-07-19T19:40:23.404",
+    "last_modified_date": "2018-07-19T19:43:23.404",
+    "filename": "schedule_tasks.jpg",
+    "alt_text": "a desk showing journals and calendars",
+    "top_post": false,
+    "nav_title": "Python Scheduled Tasks",
+    "meta_description": "Why do something manually when you it can happen automatically? The schedule
+    library in Python",
+    "category": 1
+  }
 }
 ]
 ##################### Example ###########################
