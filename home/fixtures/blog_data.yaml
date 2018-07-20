@@ -1832,13 +1832,13 @@ Now, on to making the parallels!
         \ndef print_my_language(language):
         \n    print('My language is {}'.format(language))
 \n
-        \n# Function that passes a paremeter
+        \n# Function that passes a parameter
         \nschedule.every(1).minutes.do(print_my_language, 'English')
 \n
 \n
-        \n#####################################################
-        \n### Run endless loop to check for scheduled tasks ###
-        \n#####################################################
+        \n##################################################################
+        \n### Run endless loop to check for and then run scheduled tasks ###
+        \n##################################################################
 \n
         \nwhile True:
 \n
