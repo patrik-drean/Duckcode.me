@@ -54,6 +54,17 @@
     "last_modified_date": "2018-04-28T20:32:56.366"
   }
 },
+{
+  "model": "home.category",
+  "pk": 6,
+  "fields": {
+    "name": "C++",
+    "url": "C-plus-plus",
+    "filename": null,
+    "create_date": "2018-07-25T20:32:32.404",
+    "last_modified_date": "2018-07-25T20:32:56.366"
+  }
+},
 # {
 #   "model": "home.blog",
 #   "pk": 1,
@@ -1874,7 +1885,94 @@ Now, on to making the parallels!
     library in Python",
     "category": 1
   }
+},
+{
+  "model": "home.blog",
+  "pk": 13,
+  "fields": {
+    "title": "Run C++ in the Terminal",
+    "url": "c-plus-plus-in-terminal",
+    "description": "Learn how to easily run a C++ file in the terminal while getting some exposure to C++ syntax",
+    "content": "
+           <p>
+             You may think C++ is an ancient art, but there are plenty of modern day uses of the language.
+             Many people feel strongly that
+             <a href='https://www.youtube.com/watch?v=7xVrYnyQ04M' target='_blank'>C++ is still as applicable as ever</a>.
+             This article is to show you how to execute a C++ file in terminal and give you a feel of the
+             programming language's syntax.
+           </p>
+
+           <h2>Code Example</h2>
+
+           <figure>
+             <pre>
+                  <code class='language-java line-numbers' contenteditable spellcheck='false' >// Import library
+      \n#include &lt;iostream&gt;
+      \nusing namespace std;
+\n
+      \n// This is the main function. It returns '0' just as a standard.
+      \nint main()
+      \n{
+      \n  int number;
+\n
+      \n  // Write to console
+      \n  cout << \"Enter a number between 1 and 10: \";
+\n
+      \n  // Assign input to the variable
+      \n  cin >> number;
+\n
+      \n  // Output
+      \n  cout << \"The value you entered is \" << number;
+\n
+      \n  return 0;
+      \n}
+
+                  </code>
+                  </pre>
+           </figure>
+
+           <h2>Running a C++ file</h2>
+           <p>After navigating to the appropriate folder in the terminal, run the following command.</p>
+
+           <figure>
+             <pre>
+                  <code class='language-python' contenteditable spellcheck='false' >g++ your_file_name.cpp</code>
+                  </pre>
+           </figure>
+
+           <p>This will create a new executable file named \"a.out\". The following command will actually run the program.</p>
+
+           <figure>
+             <pre>
+                  <code class='language-python' contenteditable spellcheck='false' >./a.out out</code>
+                  </pre>
+           </figure>
+
+           <p>
+             And that's that! This was just a small taste of C++ to help you decide if
+             there's something in it worth pursuing.
+             <a href='https://twitter.com/patrik_drean' target='_blank'>
+               Reach out
+             </a>
+               for questions or ideas you may have.
+           </p>
+
+                   <h2 id='reference_header' >References</h2>
+                   <a class='align-center' target='_blank' href='http://www.cplusplus.com/doc/tutorial/introduction/'>
+                     http://www.cplusplus.com/doc/tutorial/introduction/
+                   </a>
+        ",
+    "create_date": "2018-07-27T21:40:23.404", #4:24pm 4-20
+    "last_modified_date": "2018-07-27T21:43:23.404",
+    "filename": "c_plus_plus_code.jpg",
+    "alt_text": "C plus plus code.",
+    "top_post": false,
+    "nav_title": "C++ in Terminal",
+    "meta_description": "Learn how to easily run a C++ file in the terminal while getting some exposure to C++ syntax.",
+    "category": 6
+  }
 }
+
 ]
 ##################### Example ###########################
 # {
