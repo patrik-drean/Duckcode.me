@@ -1,4 +1,4 @@
-<h1 align="center" style="border-bottom: 3px solid #a8aeb7"> Duckcode.me </h1>
+<h1 align="center" style="border-bottom: 3px solid #a8aeb7"> Duckcode Blog</h1>
 A personal blog to show my progress and share knowledge with others who are also in the learning process.
 
 ## Project Overview
